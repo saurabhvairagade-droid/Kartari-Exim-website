@@ -1,0 +1,4 @@
+# Redirect old animal-feed URL to new soybean-meal page
+
+# SPA fallback - serve index.html for all unmatched routes
+/*  /index.html  200
