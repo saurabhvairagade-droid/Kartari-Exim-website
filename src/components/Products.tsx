@@ -1,9 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { motion } from 'framer-motion';
 import { Wheat, ChefHat, Leaf, Apple, Carrot, Tractor } from 'lucide-react';
+import { useFadeIn } from '../hooks/useFadeIn';
 
 const Products = () => {
+  const { containerVariants, itemVariants } = useFadeIn();
+  
   const collections = [
     {
       name: 'Artisan Spices & Seasonings',
@@ -58,21 +61,21 @@ const Products = () => {
   return (
     <section id="products" className="py-24 bg-midnight-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
+        <motion.div className="text-center mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6" variants={itemVariants}>
             Product <span className="bg-gradient-to-r from-champagne-400 to-luxury-400 bg-clip-text text-transparent">Collections</span>
-          </h2>
-          <p className="text-xl text-platinum-300 max-w-4xl mx-auto leading-relaxed">
+          </motion.h2>
+          <motion.p className="text-xl text-platinum-300 max-w-4xl mx-auto leading-relaxed" variants={itemVariants}>
             Discover our curated selection of India's finest agricultural treasures, 
             each product representing the pinnacle of quality and authenticity.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {collections.map((collection, index) => {
             const Icon = collection.icon;
             return (
-              <div key={index} className="group relative bg-gradient-to-br from-midnight-800/80 to-midnight-700/80 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden hover:shadow-champagne-500/20 transition-all duration-500 border border-champagne-800/30 hover:border-champagne-500/50 hover:transform hover:scale-105">
+              <motion.div key={index} className="group relative bg-gradient-to-br from-midnight-800/80 to-midnight-700/80 backdrop-blur-sm rounded-3xl shadow-2xl overflow-hidden hover:shadow-champagne-500/20 transition-all duration-500 border border-champagne-800/30 hover:border-champagne-500/50 hover:transform hover:scale-105" variants={itemVariants}>
                 {collection.premium && (
                   <div className="absolute top-4 right-4 z-10 bg-gradient-to-r from-champagne-500 to-luxury-600 text-midnight-900 px-3 py-1 rounded-full text-xs font-bold">
                     PREMIUM
@@ -97,18 +100,17 @@ const Products = () => {
                   </h3>
                   <p className="text-platinum-300 leading-relaxed mb-6">{collection.description}</p>
                   <Link
-  to={`/products/${collection.slug}`}
-  className="text-champagne-400 font-semibold hover:text-champagne-300 transition-colors duration-300 flex items-center group"
->
-  Explore Collection
-  <span className="ml-2 group-hover:translate-x-2 transition-transform duration-300">→</span>
-</Link>
-
+                    to={`/products/${collection.slug}`}
+                    className="text-champagne-400 font-semibold hover:text-champagne-300 transition-colors duration-300 flex items-center group"
+                  >
+                    Explore Collection
+                    <span className="ml-2 group-hover:translate-x-2 transition-transform duration-300">→</span>
+                  </Link>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

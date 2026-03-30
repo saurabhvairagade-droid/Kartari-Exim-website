@@ -1,7 +1,11 @@
 import React from 'react';
 import { CheckCircle, Clock, Shield, Globe, Users, Truck } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { useFadeIn } from '../hooks/useFadeIn';
 
 const WhyChooseUs = () => {
+  const { containerVariants, itemVariants } = useFadeIn();
+  
   const luxuryAdvantages = [
     {
       icon: CheckCircle,
@@ -38,20 +42,20 @@ const WhyChooseUs = () => {
   return (
     <section id="why-us" className="py-24 bg-luxury-gradient">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
+        <motion.div className="text-center mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6" variants={itemVariants}>
             The Kartari <span className="bg-gradient-to-r from-champagne-400 to-luxury-400 bg-clip-text text-transparent">Advantage</span>
-          </h2>
-          <p className="text-xl text-platinum-300 max-w-4xl mx-auto leading-relaxed">
+          </motion.h2>
+          <motion.p className="text-xl text-platinum-300 max-w-4xl mx-auto leading-relaxed" variants={itemVariants}>
             We are a Pune-based agricultural exporter with 15 years of combined expertise — supplying verified quality, reliable documentation, and competitive pricing to buyers worldwide.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <motion.div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {luxuryAdvantages.map((advantage, index) => {
             const Icon = advantage.icon;
             return (
-              <div key={index} className="group p-8 bg-gradient-to-br from-midnight-800/60 to-midnight-700/60 backdrop-blur-sm rounded-3xl border border-champagne-800/30 hover:border-champagne-500/50 hover:shadow-2xl hover:shadow-champagne-500/10 transition-all duration-500 hover:transform hover:scale-105">
+              <motion.div key={index} className="group p-8 bg-gradient-to-br from-midnight-800/60 to-midnight-700/60 backdrop-blur-sm rounded-3xl border border-champagne-800/30 hover:border-champagne-500/50 hover:shadow-2xl hover:shadow-champagne-500/10 transition-all duration-500 hover:transform hover:scale-105" variants={itemVariants}>
                 <div className="bg-gradient-to-br from-champagne-500/20 to-luxury-500/20 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 group-hover:from-champagne-500/30 group-hover:to-luxury-500/30 transition-all duration-300">
                   <Icon className="h-8 w-8 text-champagne-400" />
                 </div>
@@ -59,10 +63,10 @@ const WhyChooseUs = () => {
                   {advantage.title}
                 </h3>
                 <p className="text-platinum-300 leading-relaxed">{advantage.description}</p>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

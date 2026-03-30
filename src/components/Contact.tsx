@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Download, CheckCircle, AlertCircle, Star } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { useFadeIn } from '../hooks/useFadeIn';
 
 const Contact = () => {
+  const { containerVariants, itemVariants } = useFadeIn();
+  
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -104,18 +108,18 @@ const Contact = () => {
 
       <section id="contact" className="py-24 bg-midnight-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
+        <motion.div className="text-center mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6" variants={itemVariants}>
             Lets work <span className="bg-gradient-to-r from-champagne-400 to-luxury-400 bg-clip-text text-transparent">Together</span>
-          </h2>
-          <p className="text-xl text-platinum-300 max-w-4xl mx-auto leading-relaxed">
+          </motion.h2>
+          <motion.p className="text-xl text-platinum-300 max-w-4xl mx-auto leading-relaxed" variants={itemVariants}>
             Send us your product requirement and we'll get back to you with pricing, availability, and shipping details within 24 hours.
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
 
         {/* Premium Services */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="group bg-gradient-to-br from-midnight-800/60 to-midnight-700/60 backdrop-blur-sm p-8 rounded-3xl text-center hover:shadow-2xl hover:shadow-champagne-500/10 transition-all duration-500 border border-champagne-800/30 hover:border-champagne-500/50 hover:transform hover:scale-105">
+        <motion.div className="grid md:grid-cols-3 gap-8 mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.div className="group bg-gradient-to-br from-midnight-800/60 to-midnight-700/60 backdrop-blur-sm p-8 rounded-3xl text-center hover:shadow-2xl hover:shadow-champagne-500/10 transition-all duration-500 border border-champagne-800/30 hover:border-champagne-500/50 hover:transform hover:scale-105" variants={itemVariants}>
             <div className="bg-gradient-to-br from-champagne-500/20 to-luxury-500/20 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-champagne-500/30 group-hover:to-luxury-500/30 transition-all duration-300">
               <Download className="h-8 w-8 text-champagne-400" />
             </div>
@@ -129,31 +133,28 @@ const Contact = () => {
               Download Catalog
               <span className="ml-2 group-hover:translate-x-2 transition-transform duration-300">→</span>
             </a>
-          </div>
+          </motion.div>
 
-          <div className="group bg-gradient-to-br from-midnight-800/60 to-midnight-700/60 backdrop-blur-sm p-8 rounded-3xl text-center hover:shadow-2xl hover:shadow-champagne-500/10 transition-all duration-500 border border-champagne-800/30 hover:border-champagne-500/50 hover:transform hover:scale-105">
+          <motion.div className="group bg-gradient-to-br from-midnight-800/60 to-midnight-700/60 backdrop-blur-sm p-8 rounded-3xl text-center hover:shadow-2xl hover:shadow-champagne-500/10 transition-all duration-500 border border-champagne-800/30 hover:border-champagne-500/50 hover:transform hover:scale-105" variants={itemVariants}>
             <div className="bg-gradient-to-br from-champagne-500/20 to-luxury-500/20 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-champagne-500/30 group-hover:to-luxury-500/30 transition-all duration-300">
               <Star className="h-8 w-8 text-champagne-400" />
             </div>
             <h3 className="text-xl font-serif font-bold text-white mb-4">Certifications</h3>
             <p className="text-platinum-300 mb-6 leading-relaxed">View our comprehensive quality certifications </p>
-            
-          </div>
+          </motion.div>
 
-          <div className="group bg-gradient-to-br from-midnight-800/60 to-midnight-700/60 backdrop-blur-sm p-8 rounded-3xl text-center hover:shadow-2xl hover:shadow-champagne-500/10 transition-all duration-500 border border-champagne-800/30 hover:border-champagne-500/50 hover:transform hover:scale-105">
+          <motion.div className="group bg-gradient-to-br from-midnight-800/60 to-midnight-700/60 backdrop-blur-sm p-8 rounded-3xl text-center hover:shadow-2xl hover:shadow-champagne-500/10 transition-all duration-500 border border-champagne-800/30 hover:border-champagne-500/50 hover:transform hover:scale-105" variants={itemVariants}>
             <div className="bg-gradient-to-br from-champagne-500/20 to-luxury-500/20 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:from-champagne-500/30 group-hover:to-luxury-500/30 transition-all duration-300">
               <CheckCircle className="h-8 w-8 text-champagne-400" />
             </div>
             <h3 className="text-xl font-serif font-bold text-white mb-4">24hr Response</h3>
             <p className="text-platinum-300 mb-6 leading-relaxed">Send us your requirement and get a detailed quote with pricing, specs, and shipping terms within 24 hours.</p>
-          </div>
-        </div>
-
-
+          </motion.div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16">
-          <div className="space-y-8">
-            <div>
+          <motion.div className="space-y-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+            <motion.div variants={itemVariants}>
               <h3 className="text-3xl font-serif font-bold text-white mb-8">Connect With Us</h3>
               
               <div className="space-y-8">
@@ -206,17 +207,16 @@ const Contact = () => {
                   <div>
                     <h4 className="text-xl font-semibold text-white mb-2"> Headquarters</h4>
                     <p className="text-platinum-300">
-                      {/* 123 Export House, Trade Center<br /> */}
                       Pune - 411041, Maharashtra<br />
                       India
                     </p>
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Luxury Trust Indicators */}
-            <div className="bg-gradient-to-br from-champagne-500/10 to-luxury-500/10 p-8 rounded-3xl border border-champagne-800/30">
+            <motion.div className="bg-gradient-to-br from-champagne-500/10 to-luxury-500/10 p-8 rounded-3xl border border-champagne-800/30" variants={itemVariants}>
               <h4 className="text-xl font-serif font-bold text-champagne-400 mb-6">The Kartari Promise</h4>
               <ul className="space-y-4">
                 <li className="flex items-center text-platinum-300">
@@ -236,10 +236,10 @@ const Contact = () => {
                   Quote within 24 hours — no follow-up needed
                 </li>
               </ul>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          <div className="bg-gradient-to-br from-midnight-800/80 to-midnight-700/80 backdrop-blur-sm rounded-3xl shadow-2xl p-10 border border-champagne-800/30">
+          <motion.div className="bg-gradient-to-br from-midnight-800/80 to-midnight-700/80 backdrop-blur-sm rounded-3xl shadow-2xl p-10 border border-champagne-800/30" initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.35, delay: 0.2 }} viewport={{ once: true }}>
             <h3 className="text-2xl font-serif font-bold text-white mb-3">Request Quote</h3>
             <p className="text-platinum-300 mb-8">Tell us what you need and we'll send you pricing, availability and shipping details within 24 hours.</p>
             
@@ -432,7 +432,7 @@ const Contact = () => {
               By submitting this form, you agree to receive communications from Kartari Exim. 
               We respect your privacy and maintain the highest standards of confidentiality.
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
