@@ -78,8 +78,6 @@ const Contact = () => {
     'Pasta — Penne / Macaroni / Fusilli',
     'Turmeric',
     'Red Chilli',
-    'Coriander',
-    'Cumin',
     'Other — Please specify in message',
   ];
 
