@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
+import { LenisProvider } from './hooks';
 
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -22,9 +23,10 @@ import DehydratedOnionFlakesPage from './Pages/DehydratedOnionFlakesPage';
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col bg-midnight-900 text-white">
-        <Header />
+    <LenisProvider>
+      <Router>
+        <div className="min-h-screen flex flex-col bg-midnight-900 text-white">
+          <Header />
 
         <main className="flex-grow">
           <Routes>
@@ -62,6 +64,7 @@ function App() {
         <Footer />
       </div>
     </Router>
+    </LenisProvider>
   );
 }
 
