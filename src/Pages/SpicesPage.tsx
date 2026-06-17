@@ -52,7 +52,6 @@ const SpicesPage = () => {
         <title>Premium Indian Spices Exporter | Turmeric & Red Chilli | Kartari Exim</title>
         <meta name="description" content="Buy premium Indian spices including Turmeric Powder, Red Chilli Powder, and Dried Red Chilli. Bulk export from India with highest quality standards." />
         <meta name="keywords" content="indian spices exporter, turmeric powder export, red chilli powder supplier, bulk spices india" />
-        <link rel="canonical" href="https://kartariexim.com/products/spices" />
         <meta property="og:title" content="Premium Indian Spices Exporter | Kartari Exim" />
         <meta property="og:description" content="Bulk export of premium Turmeric and Red Chilli from India." />
       </Helmet>
@@ -150,7 +149,7 @@ const SpicesPage = () => {
               <li><strong>Use:</strong> Versatile for soups/sauces/seasonings, time-saving, and cost-effective.  </li>
             </ul>
             <Link
-              to="/products/dehydrated-onion-flakes"
+              to="/products/dehydrated-onion-flakes/"
               className="inline-block mt-6 bg-gradient-to-r from-champagne-500 to-luxury-500 text-midnight-900 font-semibold px-6 py-3 rounded-full hover:opacity-90 transition-all text-sm"
             >
               View Full Product Details →

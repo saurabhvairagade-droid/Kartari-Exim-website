@@ -9,6 +9,7 @@ import Products from './components/Products';
 import WhyChooseUs from './components/WhyChooseUs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import DefaultSeo from './components/DefaultSeo';
 
 // Lazy load pages for better performance and smaller initial bundle size
 const AnimalFeedPage = lazy(() => import('./Pages/AnimalFeedPage'));
@@ -20,6 +21,8 @@ const ProcessedFoodPage = lazy(() => import('./Pages/ProcessedFoodPage'));
 const BlogPage = lazy(() => import('./Pages/BlogPage'));
 const BlogPostPage = lazy(() => import('./Pages/BlogPostPage'));
 const DehydratedOnionFlakesPage = lazy(() => import('./Pages/DehydratedOnionFlakesPage'));
+const Error404Page = lazy(() => import('./Pages/Error404Page'));
+const Error400Page = lazy(() => import('./Pages/Error400Page'));
 
 // Loading component
 const PageLoader = () => (
@@ -34,10 +37,9 @@ import { useLocation } from 'react-router-dom';
 const DynamicCanonical = () => {
   const location = useLocation();
   const isHome = location.pathname === '/';
-  const canonicalUrl = `https://kartariexim.com${isHome ? '/' : location.pathname}`;
+  const canonicalUrl = `https://kartariexim.com${isHome ? '/' : (location.pathname.endsWith('/') ? location.pathname : location.pathname + '/')}`;
   return (
     <Helmet>
-      <link rel="canonical" href={canonicalUrl} />
     </Helmet>
   );
 };
@@ -57,6 +59,7 @@ function App() {
   return (
     <LenisProvider>
       <Router>
+        <DefaultSeo />
         <DynamicCanonical />
         <PrerenderTrigger />
         <div className="min-h-screen flex flex-col bg-midnight-900 text-white">
@@ -93,6 +96,10 @@ function App() {
 
                 {/* Individual product pages */}
                 <Route path="/products/dehydrated-onion-flakes" element={<DehydratedOnionFlakesPage />} />
+
+                {/* Error Pages */}
+                <Route path="/400" element={<Error400Page />} />
+                <Route path="*" element={<Error404Page />} />
               </Routes>
             </Suspense>
           </main>

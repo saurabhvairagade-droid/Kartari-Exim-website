@@ -72,7 +72,6 @@ const AnimalFeedPage = () => {
         <meta name="description" content="Buy Non-GMO Soybean Meal (Soya DOC) from Kartari Exim, Pune, India. 46–50% crude protein. Bulk export in 50kg PP bags for poultry, cattle, swine & aquaculture. Request a quote within 24 hours." />
         <meta name="keywords" content="soybean meal exporter India, soya DOC supplier Pune, de-oiled cake export, SBM 46% 48%, non-GMO soybean meal, animal feed India, bulk soya DOC" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://kartariexim.com/products/soybean-meal" />
 
         {/* Open Graph — WhatsApp, LinkedIn, Facebook previews */}
         <meta property="og:type" content="product" />
@@ -290,13 +289,13 @@ const AnimalFeedPage = () => {
         <div className="mb-12 max-w-4xl">
           <h2 className="text-2xl font-bold text-champagne-400 mb-4">Further Reading</h2>
           <div className="space-y-3">
-            <Link to="/blog/soybean-meal-vs-soya-doc" className="flex items-center gap-2 text-champagne-400 hover:underline">
+            <Link to="/blog/soybean-meal-vs-soya-doc/" className="flex items-center gap-2 text-champagne-400 hover:underline">
               → Soybean Meal vs Soya DOC — Are They the Same Thing?
             </Link>
-            <Link to="/blog/soybean-meal-protein-content-guide" className="flex items-center gap-2 text-champagne-400 hover:underline">
+            <Link to="/blog/soybean-meal-protein-content-guide/" className="flex items-center gap-2 text-champagne-400 hover:underline">
               → Soybean Meal Protein Content — 46% vs 48% vs 50% Explained
             </Link>
-            <Link to="/blog/how-to-import-soybean-meal-from-india" className="flex items-center gap-2 text-champagne-400 hover:underline">
+            <Link to="/blog/how-to-import-soybean-meal-from-india/" className="flex items-center gap-2 text-champagne-400 hover:underline">
               → How to Source Soybean Meal from India — A Buyer's Guide
             </Link>
           </div>

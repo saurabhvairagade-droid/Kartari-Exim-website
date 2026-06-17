@@ -70,7 +70,6 @@ const BlogPage = () => {
         <title>Blog & Market Insights | Kartari Exim</title>
         <meta name="description" content="Practical guides and market insights for agricultural commodity importers and feed manufacturers worldwide. Learn about sourcing from India." />
         <meta name="keywords" content="agricultural export blog, import from india guide, commodity insights" />
-        <link rel="canonical" href="https://kartariexim.com/blog" />
       </Helmet>
       <main className="pt-32 px-4 md:px-8 max-w-5xl mx-auto pb-20">
 
@@ -85,7 +84,7 @@ const BlogPage = () => {
           {[...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).map((post) => (
             <Link
               key={post.slug}
-              to={`/blog/${post.slug}`}
+              to={`/blog/${post.slug}/`}
               className="block bg-midnight-800 rounded-xl p-8 border border-champagne-800/30 hover:border-champagne-500/50 transition-all duration-300 group"
             >
               <div className="flex items-center gap-3 mb-3">

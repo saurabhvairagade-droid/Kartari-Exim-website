@@ -66,7 +66,6 @@ const DehydratedOnionFlakesPage = () => {
         <meta name="description" content="Buy premium Dehydrated Red Onion Flakes from Kartari Exim, Pune, India. 100% natural, no preservatives. Max 7% moisture. Bulk export in 10–25kg bags for food processing, seasonings & soups. Get a quote within 24 hours." />
         <meta name="keywords" content="dehydrated onion flakes exporter India, dried onion flakes supplier Pune, red onion flakes bulk export, dehydrated onion manufacturer India, onion flakes food processing" />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://kartariexim.com/products/dehydrated-onion-flakes" />
 
         {/* Open Graph */}
         <meta property="og:type" content="product" />
@@ -173,7 +172,7 @@ const DehydratedOnionFlakesPage = () => {
 
         {/* Breadcrumb */}
         <p className="text-sm text-platinum-400 mb-6">
-          <Link to="/products/spices" className="hover:text-champagne-400 transition-colors">← Back to Spices Collection</Link>
+          <Link to="/products/spices/" className="hover:text-champagne-400 transition-colors">← Back to Spices Collection</Link>
         </p>
 
         {/* Hero */}
@@ -283,13 +282,13 @@ const DehydratedOnionFlakesPage = () => {
         <div className="mb-12 max-w-4xl">
           <h2 className="text-2xl font-bold text-champagne-400 mb-4">Related Products</h2>
           <div className="space-y-3">
-            <Link to="/products/spices" className="flex items-center gap-2 text-champagne-400 hover:underline">
+            <Link to="/products/spices/" className="flex items-center gap-2 text-champagne-400 hover:underline">
               → View all Spices & Seasonings
             </Link>
-            <Link to="/products/vegetables" className="flex items-center gap-2 text-champagne-400 hover:underline">
+            <Link to="/products/vegetables/" className="flex items-center gap-2 text-champagne-400 hover:underline">
               → Fresh Nasik Red Onion (whole)
             </Link>
-            <Link to="/products/soybean-meal" className="flex items-center gap-2 text-champagne-400 hover:underline">
+            <Link to="/products/soybean-meal/" className="flex items-center gap-2 text-champagne-400 hover:underline">
               → Soybean Meal (Soya DOC)
             </Link>
           </div>

@@ -51,7 +51,6 @@ const FruitsPage = () => {
         <title>Fresh Indian Fruits Exporter | Pomegranate & Banana | Kartari Exim</title>
         <meta name="description" content="Exporting premium fresh fruits from India. Buy Bhagwa Pomegranates and export-grade G9 Cavendish Bananas in bulk. Global shipping." />
         <meta name="keywords" content="fresh fruits exporter india, pomegranate export, g9 cavendish banana supplier, bulk fruits india" />
-        <link rel="canonical" href="https://kartariexim.com/products/fruits" />
         <meta property="og:title" content="Fresh Indian Fruits Exporter | Kartari Exim" />
         <meta property="og:description" content="Bulk export of premium Pomegranates and G9 Cavendish Bananas from India." />
       </Helmet>

@@ -51,7 +51,6 @@ const ProcessedFoodPage = () => {
         <title>Premium Processed Food Exporter | Jaggery & S30 Sugar | Kartari Exim</title>
         <meta name="description" content="Exporting premium processed foods from India. Buy chemical-free Jaggery Powder and highly refined S30 White Sugar in bulk." />
         <meta name="keywords" content="processed food exporter india, jaggery powder export, s30 sugar supplier, bulk sugar india" />
-        <link rel="canonical" href="https://kartariexim.com/products/gourmet-processed-foods" />
         <meta property="og:title" content="Premium Processed Food Exporter | Kartari Exim" />
         <meta property="og:description" content="Bulk export of premium Jaggery Powder and S30 Sugar from India." />
       </Helmet>

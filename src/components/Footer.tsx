@@ -54,7 +54,7 @@ const Footer = () => {
               <li><a href="/#about" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">About Us</a></li>
               <li><a href="/#products" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">Products</a></li>
               <li><a href="/#why-us" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">Why Us</a></li>
-              <li><a href="/blog" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">Blog</a></li>
+              <li><a href="/blog/" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">Blog</a></li>
               <li><a href="/#contact" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">Contact</a></li>
             </ul>
           </div>
@@ -63,12 +63,12 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-serif font-bold text-champagne-400 mb-6">Products</h4>
             <ul className="space-y-3">
-              <li><Link to="/products/soybean-meal" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">Soybean Meal</Link></li>
-              <li><Link to="/products/spices" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">Artisan Spices</Link></li>
-              <li><Link to="/products/basmati-rice" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">Basmati Rice</Link></li>
-              <li><Link to="/products/vegetables" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">Fresh Vegetables</Link></li>
-              <li><Link to="/products/fruits" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">Fresh Fruits</Link></li>
-              <li><Link to="/products/gourmet-processed-foods" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">Processed Foods</Link></li>
+              <li><Link to="/products/soybean-meal/" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">Soybean Meal</Link></li>
+              <li><Link to="/products/spices/" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">Artisan Spices</Link></li>
+              <li><Link to="/products/basmati-rice/" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">Basmati Rice</Link></li>
+              <li><Link to="/products/vegetables/" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">Fresh Vegetables</Link></li>
+              <li><Link to="/products/fruits/" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">Fresh Fruits</Link></li>
+              <li><Link to="/products/gourmet-processed-foods/" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">Processed Foods</Link></li>
             </ul>
           </div>
         </div>

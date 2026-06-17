@@ -109,7 +109,7 @@ const posts: Record<string, React.ReactNode> = {
       </p>
 
       <Link
-        to="/products/soybean-meal"
+        to="/products/soybean-meal/"
         className="inline-block bg-gradient-to-r from-champagne-500 to-luxury-500 text-midnight-900 font-semibold px-8 py-4 rounded-full hover:opacity-90 transition-all"
       >
         View our Soybean Meal product page →
@@ -200,7 +200,7 @@ const posts: Record<string, React.ReactNode> = {
       </p>
 
       <Link
-        to="/products/soybean-meal"
+        to="/products/soybean-meal/"
         className="inline-block bg-gradient-to-r from-champagne-500 to-luxury-500 text-midnight-900 font-semibold px-8 py-4 rounded-full hover:opacity-90 transition-all"
       >
         View our Soybean Meal product page →
@@ -397,7 +397,7 @@ const posts: Record<string, React.ReactNode> = {
       </div>
 
       <Link
-        to="/products/soybean-meal"
+        to="/products/soybean-meal/"
         className="inline-block bg-gradient-to-r from-champagne-500 to-luxury-500 text-midnight-900 font-semibold px-8 py-4 rounded-full hover:opacity-90 transition-all"
       >
         View our Soybean Meal product page →
@@ -498,7 +498,7 @@ const posts: Record<string, React.ReactNode> = {
       </ul>
 
       <Link
-        to="/products/soybean-meal"
+        to="/products/soybean-meal/"
         className="inline-block bg-gradient-to-r from-champagne-500 to-luxury-500 text-midnight-900 font-semibold px-8 py-4 rounded-full hover:opacity-90 transition-all"
       >
         Request Non-GMO Soya DOC from Kartari Exim →
@@ -587,7 +587,7 @@ const posts: Record<string, React.ReactNode> = {
       </p>
 
       <Link
-        to="/products/soybean-meal"
+        to="/products/soybean-meal/"
         className="inline-block bg-gradient-to-r from-champagne-500 to-luxury-500 text-midnight-900 font-semibold px-8 py-4 rounded-full hover:opacity-90 transition-all"
       >
         Get a quote from Kartari Exim →
@@ -664,7 +664,7 @@ const posts: Record<string, React.ReactNode> = {
       </p>
 
       <Link
-        to="/products/soybean-meal"
+        to="/products/soybean-meal/"
         className="inline-block bg-gradient-to-r from-champagne-500 to-luxury-500 text-midnight-900 font-semibold px-8 py-4 rounded-full hover:opacity-90 transition-all"
       >
         Get a quote from Kartari Exim →
@@ -689,7 +689,7 @@ const BlogPostPage = () => {
         </Helmet>
         <main className="pt-32 px-4 md:px-8 max-w-3xl mx-auto pb-20">
           <h1 className="text-3xl font-bold text-champagne-400 mb-4">Article not found</h1>
-          <Link to="/blog" className="text-champagne-400 hover:underline">← Back to blog</Link>
+          <Link to="/blog/" className="text-champagne-400 hover:underline">← Back to blog</Link>
         </main>
       </div>
     );
@@ -700,14 +700,13 @@ const BlogPostPage = () => {
       <Helmet>
         <title>{post.title} | Kartari Exim</title>
         <meta name="description" content={post.excerpt} />
-        <link rel="canonical" href={`https://kartariexim.com/blog/${post.slug}`} />
         <meta property="og:title" content={post.title} />
         <meta property="og:description" content={post.excerpt} />
         <meta property="og:type" content="article" />
       </Helmet>
       <main className="pt-32 px-4 md:px-8 max-w-3xl mx-auto pb-20">
 
-        <Link to="/blog" className="text-champagne-400 text-sm hover:underline mb-8 inline-block">
+        <Link to="/blog/" className="text-champagne-400 text-sm hover:underline mb-8 inline-block">
           ← Back to all articles
         </Link>
 
