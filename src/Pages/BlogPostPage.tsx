@@ -223,7 +223,7 @@ const posts: Record<string, React.ReactNode> = {
       `}} />
 
       <h1 className="text-4xl md:text-5xl font-bold text-champagne-400 mb-6">
-        How to Source Soybean Meal from India — A Buyer's Guide
+        Importing Soybean Meal from India — A Buyer's Guide
       </h1>
 
       <p className="text-platinum-300 leading-relaxed mb-8">
@@ -322,7 +322,7 @@ const posts: Record<string, React.ReactNode> = {
       `}} />
 
       <h1 className="text-4xl md:text-5xl font-bold text-champagne-400 mb-6">
-        How Soya DOC is Adulterated in India — And How Buyers Can Protect Themselves
+        Soya DOC Adulteration in India — And How Buyers Can Protect Themselves
       </h1>
 
       <p className="text-platinum-300 leading-relaxed mb-6">

@@ -59,7 +59,7 @@ const VegetablesPage = () => {
 
       <main className="pt-32 px-4 md:px-8 max-w-7xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-champagne-400 mb-4">
-          Fresh Vegetables Collection
+          Fresh Vegetables
         </h1>
         <p className="text-lg md:text-xl text-platinum-300 mb-10">
           We bring you handpicked fresh vegetables like Nasik Red Onion and G4 Green Chilli — grown with care, packed with nutrition, and shipped globally with care.

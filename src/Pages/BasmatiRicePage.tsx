@@ -47,7 +47,7 @@ const BasmatiRicePage = () => {
 
       <main className="pt-32 px-4 md:px-8 max-w-7xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-champagne-400 mb-4">
-          Basmati Rice Collection
+          Basmati Rice
         </h1>
         <p className="text-lg md:text-xl text-platinum-300 mb-10">
           Our premium 1121 Basmati Rice varieties are renowned for their extra-long grain, aromatic fragrance, and excellent cooking quality. Sourced from trusted mills and processed for purity.

@@ -59,7 +59,7 @@ const FruitsPage = () => {
 
       <main className="pt-32 px-4 md:px-8 max-w-7xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-champagne-400 mb-4">
-          Fresh Fruits Collection
+          Fresh Fruits
         </h1>
         <p className="text-lg md:text-xl text-platinum-300 mb-10">
           Explore our premium fresh fruit exports featuring vibrant Pomegranates and export-grade G9 Cavendish Bananas. Carefully harvested, sorted, and packed for international markets.

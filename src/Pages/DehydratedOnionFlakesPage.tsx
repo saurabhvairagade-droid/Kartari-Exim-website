@@ -73,7 +73,7 @@ const DehydratedOnionFlakesPage = () => {
         <meta property="og:title" content="Dehydrated Red Onion Flakes Exporter India | Kartari Exim" />
         <meta property="og:description" content="100% natural dehydrated red onion flakes. No preservatives. Bulk export from Pune, India for food processing, soups, seasonings. Get a quote within 24 hours." />
         <meta property="og:url" content="https://kartariexim.com/products/dehydrated-onion-flakes" />
-        <meta property="og:image" content="https://kartariexim.com/Red onion flakes.png" />
+        <meta property="og:image" content="https://kartariexim.com/Red onion flakes.webp" />
         <meta property="og:image:alt" content="Dehydrated Red Onion Flakes bulk export India Kartari Exim" />
         <meta property="og:site_name" content="Kartari Exim" />
         <meta property="og:locale" content="en_IN" />
@@ -82,7 +82,7 @@ const DehydratedOnionFlakesPage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Dehydrated Red Onion Flakes Exporter India | Kartari Exim" />
         <meta name="twitter:description" content="100% natural dehydrated red onion flakes. No preservatives. Bulk export from Pune, India." />
-        <meta name="twitter:image" content="https://kartariexim.com/Red onion flakes.png" />
+        <meta name="twitter:image" content="https://kartariexim.com/Red onion flakes.webp" />
 
         {/* Product Schema */}
         <script type="application/ld+json">{`
@@ -92,7 +92,7 @@ const DehydratedOnionFlakesPage = () => {
   "name": "Dehydrated Red Onion Flakes",
   "alternateName": ["Dried Onion Flakes", "Dehydrated Onion", "Red Onion Flakes"],
   "description": "100% natural dehydrated red onion flakes with no artificial preservatives. Exported from Pune, Maharashtra, India for food processing, soups, sauces, and seasoning applications.",
-  "image": "https://kartariexim.com/Red onion flakes.png",
+  "image": "https://kartariexim.com/Red onion flakes.webp",
   "brand": { "@type": "Brand", "name": "Kartari Exim" },
   "manufacturer": {
     "@type": "Organization",
@@ -190,7 +190,7 @@ const DehydratedOnionFlakesPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-6 items-start bg-midnight-800 rounded-xl p-6 mb-12">
           <div>
             <img
-              src="/Red onion flakes.png"
+              src="/Red onion flakes.webp"
               alt="Dehydrated red onion flakes bulk export India Kartari Exim Pune"
               className="w-96 h-64 object-cover rounded-lg shadow"
             />

@@ -59,7 +59,7 @@ const SpicesPage = () => {
       <Header />
       <main className="pt-32 px-4 md:px-8 max-w-7xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-champagne-400 mb-4">
-          Spices Collection
+          Spices
         </h1>
         <p className="text-lg md:text-xl text-platinum-300 mb-10">
           Discover our finest selection of Indian spices, including Turmeric Powder, Red Chilli Powder, and Dried Red Chilli. Each product is sun-dried, sorted, and packed with flavor and nutrition.
@@ -127,7 +127,7 @@ const SpicesPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-6 items-start bg-midnight-800 rounded-xl p-6 mb-20">
           <div>
             <img
-              src="/Red onion flakes.png"
+              src="/Red onion flakes.webp"
               alt="Dehydrated Onion Flakes"
               width="384"
               height="256"

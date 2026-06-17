@@ -31,7 +31,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-4 hover:opacity-80 transition-opacity duration-300">
             <img 
-              src="/Kartari Logo.png" 
+              src="/Kartari Logo.webp" 
               alt="Kartari Exim Logo" 
               className="h-12 w-auto filter brightness-110"
             />

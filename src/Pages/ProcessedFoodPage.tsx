@@ -59,7 +59,7 @@ const ProcessedFoodPage = () => {
 
       <main className="pt-32 px-4 md:px-8 max-w-7xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-champagne-400 mb-4">
-          Processed Food Collection
+          Processed Food
         </h1>
         <p className="text-lg md:text-xl text-platinum-300 mb-10">
           Explore our selection of gourmet processed foods, starting with premium jaggery powder. Sourced from natural sugarcane and processed without chemicals, our offerings meet global standards for purity, nutrition, and taste ideal for health-conscious and organic focused markets.
@@ -69,7 +69,7 @@ const ProcessedFoodPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-6 items-start bg-midnight-800 rounded-xl p-6 mb-20">
           <div>
             <img
-              src="/jaggery powder.png"
+              src="/jaggery powder.webp"
               alt="Jaggery Powder"
               width="384"
               height="256"
@@ -99,7 +99,7 @@ const ProcessedFoodPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-6 items-start bg-midnight-800 rounded-xl p-6 mb-20">
           <div>
             <img
-              src="/s30 sugar.png"
+              src="/s30 sugar.webp"
               alt="Refined white sugar"
               width="384"
               height="256"

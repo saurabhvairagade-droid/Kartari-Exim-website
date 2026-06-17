@@ -55,7 +55,7 @@ export const blogPosts = [
     slug: 'soybean-meal-prices-rising-india-2026',
     title: 'Why Soybean Meal Prices in India Are Rising in 2026 — 7 Key Reasons',
     excerpt: 'Soya DOC prices have climbed steadily since January 2026. From a smaller kharif crop to suspended NCDEX futures, here are the 7 factors driving the increase.',
-    date: 'April 20, 2026',
+    date: 'June 17, 2026',
     readTime: '6 min read',
     category: 'Market Update',
   },

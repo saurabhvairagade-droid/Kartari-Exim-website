@@ -79,7 +79,7 @@ const AnimalFeedPage = () => {
         <meta property="og:title" content="Soybean Meal (Soya DOC) Exporter from India | Kartari Exim" />
         <meta property="og:description" content="Non-GMO Soya DOC with 46–50% protein. Bulk export from Pune, India for poultry, cattle, swine & aquaculture feed. Get a quote within 24 hours." />
         <meta property="og:url" content="https://kartariexim.com/products/soybean-meal" />
-        <meta property="og:image" content="https://kartariexim.com/soyaDOC.png" />
+        <meta property="og:image" content="https://kartariexim.com/soyaDOC.webp" />
         <meta property="og:image:alt" content="Soybean Meal Soya DOC bulk export India Kartari Exim" />
         <meta property="og:site_name" content="Kartari Exim" />
         <meta property="og:locale" content="en_IN" />
@@ -88,7 +88,7 @@ const AnimalFeedPage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Soybean Meal Exporter India | Kartari Exim" />
         <meta name="twitter:description" content="Non-GMO Soya DOC 46–50% protein. Bulk export from Pune, India. Get a quote within 24 hours." />
-        <meta name="twitter:image" content="https://kartariexim.com/soyaDOC.png" />
+        <meta name="twitter:image" content="https://kartariexim.com/soyaDOC.webp" />
 
         {/* Product Schema */}
         <script type="application/ld+json">{`
@@ -98,7 +98,7 @@ const AnimalFeedPage = () => {
   "name": "Soybean Meal (Soya DOC)",
   "alternateName": ["Soya DOC", "De-Oiled Cake", "SBM 46%", "SBM 48%", "Soya De-Oiled Cake"],
   "description": "Non-GMO Soya DOC (De-Oiled Cake) with 46–50% crude protein. Exported from Pune, Maharashtra, India for poultry, cattle, dairy, swine and aquaculture feed. Available in 50kg PP bags or bulk container loads.",
-  "image": "https://kartariexim.com/soyaDOC.png",
+  "image": "https://kartariexim.com/soyaDOC.webp",
   "brand": { "@type": "Brand", "name": "Kartari Exim" },
   "manufacturer": {
     "@type": "Organization",
@@ -185,7 +185,7 @@ const AnimalFeedPage = () => {
 
         {/* Hero */}
         <h1 className="text-4xl md:text-5xl font-bold text-champagne-400 mb-4">
-          Soybean Meal — Soya DOC Exporter from India
+          Soybean Meal — Soya DOC Exporter India
         </h1>
         <p className="text-lg md:text-xl text-platinum-300 mb-10 max-w-3xl">
           Kartari Exim is a trusted Non-GMO soybean meal supplier and exporter based in Pune, Maharashtra, 
@@ -197,7 +197,7 @@ const AnimalFeedPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-6 items-start bg-midnight-800 rounded-xl p-6 mb-12">
           <div>
             <img
-              src="/soyaDOC.png"
+              src="/soyaDOC.webp"
               alt="Soybean meal Soya DOC 46% protein bulk export India Kartari Exim"
               className="w-96 h-64 object-cover rounded-lg shadow"
             />
