@@ -26,7 +26,7 @@ const Hero = () => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15"
         style={{
-          backgroundImage: 'url(https://images.pexels.com/photos/1300972/pexels-photo-1300972.jpeg?auto=compress&cs=tinysrgb&w=1200)'
+          backgroundImage: 'url(https://images.pexels.com/photos/1300972/pexels-photo-1300972.jpeg?auto=compress&cs=tinysrgb&w=1600)'
         }}
       ></div>
 
@@ -86,8 +86,12 @@ const Hero = () => {
           <motion.div className="relative" initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.35, delay: 0.2 }} viewport={{ once: true }}>
             <div className="bg-gradient-to-br from-midnight-800/90 to-midnight-700/90 backdrop-blur-xl rounded-3xl shadow-2xl p-10 border border-champagne-800/30">
               <img
-                src="https://images.pexels.com/photos/9705821/pexels-photo-9705821.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="https://images.pexels.com/photos/9705821/pexels-photo-9705821.jpeg?auto=compress&cs=tinysrgb&w=800"
                 alt="Premium agricultural products showcase"
+                width="600"
+                height="320"
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-80 object-cover rounded-2xl shadow-xl"
               />
               <motion.div className="mt-8 grid grid-cols-3 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>

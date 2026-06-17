@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import { Helmet } from 'react-helmet';
 import { blogPosts } from './BlogPage';
 
 const posts: Record<string, React.ReactNode> = {
@@ -106,7 +105,7 @@ const posts: Record<string, React.ReactNode> = {
         Soybean meal and Soya DOC are the same product — a high-protein animal feed ingredient produced by extracting oil from soybeans. The different names reflect regional terminology rather than any difference in the product itself. Whether you are searching for soybean meal, Soya DOC, de-oiled cake, or SBM 48%, you are looking for the same commodity.
       </p>
       <p className="text-platinum-300 leading-relaxed mb-10">
-        At Kartari Exim, we export Non-GMO Soya DOC (46–50% protein) from Pune, India to buyers across Asia, the Middle East, and Africa. If you have a requirement, get in touch and we will respond within 24 hours with pricing and availability.
+        At Kartari Exim, we export Non-GMO Soya DOC (46–48% protein) from Pune, India to buyers across Asia, the Middle East, and Africa. If you have a requirement, get in touch and we will respond within 24 hours with pricing and availability.
       </p>
 
       <Link
@@ -209,7 +208,7 @@ const posts: Record<string, React.ReactNode> = {
     </>
   ),
 
-  'how-to-import-soybean-meal-from-india': (
+  'import-soybean-meal-from-india': (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
 {
@@ -307,6 +306,371 @@ const posts: Record<string, React.ReactNode> = {
       </Link>
     </>
   ),
+
+  'soya-doc-adulteration-india': (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How Soya DOC is Adulterated in India — And How Buyers Can Protect Themselves",
+  "author": { "@type": "Organization", "name": "Kartari Exim" },
+  "publisher": { "@type": "Organization", "name": "Kartari Exim", "url": "https://kartariexim.com" },
+  "datePublished": "2026-04-20",
+  "description": "Soya DOC adulteration is a documented problem in India. Here are the 6 methods fraudsters use and 8 ways buyers can protect themselves before placing bulk orders."
+}
+      `}} />
+
+      <h1 className="text-4xl md:text-5xl font-bold text-champagne-400 mb-6">
+        How Soya DOC is Adulterated in India — And How Buyers Can Protect Themselves
+      </h1>
+
+      <p className="text-platinum-300 leading-relaxed mb-6">
+        Soya DOC is a high-value commodity priced primarily by its protein content. That pricing gap between quality meal and cheap adulterants creates a strong financial incentive for fraud. The fundamental principle behind all Soya DOC adulteration is simple — the standard Kjeldahl protein test that most buyers use measures <strong className="text-white">nitrogen content, not actual protein</strong>. Fraudsters exploit this by adding cheap nitrogen-rich substances that fool the test while delivering far less real protein.
+      </p>
+      <p className="text-platinum-300 leading-relaxed mb-8">
+        This is not a theoretical risk. It is a documented and widespread practice in India's animal feed supply chain, acknowledged by veterinary research institutions, the Dairy Knowledge Portal, and India's Bureau of Indian Standards. Understanding how it works is the first step to protecting yourself.
+      </p>
+
+      <h2 className="text-2xl font-bold text-white mb-6">6 Methods Used to Adulterate Soya DOC in India</h2>
+
+      {[
+        {
+          title: '1. Urea Spraying — Most Prevalent',
+          body: 'Urea is an extremely cheap nitrogen compound costing ₹5–6/kg. When sprayed onto Soya DOC, it dramatically raises the apparent protein reading in a standard Kjeldahl nitrogen test. A small quantity of urea can make a batch of 44% protein Soya DOC appear to be 48% HiPro — commanding a price premium of ₹3,000–4,000/MT for something that cost almost nothing to add. For poultry and aquaculture, which cannot metabolise urea the way ruminants can, this is particularly dangerous and can cause severe production losses and animal mortality.',
+        },
+        {
+          title: '2. Melamine Addition — Most Dangerous',
+          body: 'Melamine contains 66% nitrogen by weight — making it extraordinarily effective at inflating Kjeldahl protein readings. It looks like a white powder and blends invisibly into the meal. Multiple documented cases of soybean meal adulterated with melamine have been reported globally since 2007, leading the European Commission to impose import bans on Chinese soybean meal. Melamine is highly toxic and causes kidney failure at sufficient doses. Any buyer purchasing Soya DOC from an unverified supplier without specific melamine testing in the COA is at risk.',
+        },
+        {
+          title: '3. Mixing Non-Edible Oilseed Cakes',
+          body: 'India produces large quantities of non-edible oilseed cakes from castor, neem, and karanja (Pongamia) seeds. These cakes sell at ₹8,000–12,000/MT versus ₹40,000+/MT for quality Soya DOC. Mixing even 10–15% karanja or castor cake into Soya DOC creates significant profit. The product still appears visually similar to genuine Soya DOC but contains toxic compounds — ricin in castor cake and karanjin in karanja — that cause feed refusal, liver damage, and death in livestock.',
+        },
+        {
+          title: '4. Husk and Fibrous Filler Addition',
+          body: 'Ground rice husk, wheat bran, sawdust, and corn husk are added to increase the volume and weight of the product. When finely ground and blended, these are virtually undetectable by eye. The result is double fraud — the buyer pays for protein that is not present, and the filler displaces actual Soya DOC content per bag. Low crude protein combined with high crude fiber in a COA is the key indicator of this adulteration.',
+        },
+        {
+          title: '5. Sand and Soil Addition',
+          body: 'The crudest form of adulteration — simply adding sand or soil to increase bag weight. At ₹40,000/MT, adding even 2–3% sand to a 24 MT container represents ₹19,000–29,000 in pure theft. It is also the easiest to detect with basic testing. The Acid Insoluble Ash (AIA) test specifically identifies sand and mineral adulterants.',
+        },
+        {
+          title: '6. Grade Misrepresentation',
+          body: 'The most common commercial fraud buyers encounter — selling standard SBM 46% as HiPro SBM 48% and charging the higher price. On current NCDEX prices that is a ₹3,500/MT premium for the same product. On a 24 MT container that is ₹84,000 in pure misrepresentation profit. Without an independent COA from an accredited laboratory, a buyer cannot detect this at all.',
+        },
+      ].map((item) => (
+        <div key={item.title} className="bg-midnight-800 rounded-xl p-6 mb-5">
+          <h3 className="text-lg font-bold text-champagne-400 mb-3">{item.title}</h3>
+          <p className="text-platinum-300 text-sm leading-relaxed">{item.body}</p>
+        </div>
+      ))}
+
+      <h2 className="text-2xl font-bold text-white mb-6 mt-10">8 Ways Buyers Can Protect Themselves</h2>
+
+      <div className="space-y-4 mb-10">
+        {[
+          ['Always demand a COA from an NABL-accredited laboratory', 'Not an in-house supplier test. NABL accreditation means the lab is independently verified by India\'s National Accreditation Board for Testing and Calibration Laboratories.'],
+          ['Request the COA tests for all key parameters', 'Crude protein, moisture, crude fiber, urease activity, acid insoluble ash (AIA), and melamine — not just protein alone.'],
+          ['Be suspicious of prices significantly below market', 'If NCDEX spot is ₹40,500/MT and a supplier quotes ₹35,000/MT for the same spec, ask why. Deep discounts on a commodity are almost always a quality signal.'],
+          ['Always request a pre-shipment sample', 'Test it independently at an NABL lab before paying. A reputable exporter will always agree to this.'],
+          ['Verify APEDA registration', 'Check the supplier on the APEDA website. APEDA registration is a basic compliance requirement for legitimate Indian agricultural exporters.'],
+          ['Verify the GSTIN', 'Check the supplier\'s GST number on the GST portal. Unregistered or recently registered entities with no track record are higher risk.'],
+          ['For large orders insist on third-party pre-shipment inspection', 'SGS, Bureau Veritas, or Intertek can inspect your shipment before it leaves India. This costs a fraction of the order value and eliminates most fraud risk.'],
+          ['Build supplier relationships incrementally', 'Start with a small trial order, test thoroughly, and scale up only after consistent quality across multiple shipments is demonstrated.'],
+        ].map(([rule, detail], i) => (
+          <div key={i} className="flex gap-4">
+            <span className="text-champagne-400 font-bold text-lg flex-shrink-0">{i + 1}.</span>
+            <div>
+              <p className="text-white font-semibold mb-1">{rule}</p>
+              <p className="text-platinum-300 text-sm">{detail}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="bg-midnight-800 rounded-xl p-6 mb-10">
+        <h3 className="text-lg font-bold text-champagne-400 mb-3">A note from Kartari Exim</h3>
+        <p className="text-platinum-300 text-sm leading-relaxed">
+          We publish this information because we believe informed buyers make better partners. At Kartari Exim, we welcome independent testing on every shipment — because our product quality stands up to scrutiny. Every order we ship comes with a COA from an accredited laboratory, phytosanitary certificate, and full export documentation. If a supplier discourages you from testing, that itself is your answer.
+        </p>
+      </div>
+
+      <Link
+        to="/products/soybean-meal"
+        className="inline-block bg-gradient-to-r from-champagne-500 to-luxury-500 text-midnight-900 font-semibold px-8 py-4 rounded-full hover:opacity-90 transition-all"
+      >
+        View our Soybean Meal product page →
+      </Link>
+    </>
+  ),
+
+  'non-gmo-soybean-meal-india': (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Non-GMO Soybean Meal from India — Why It Matters for Your Business",
+  "author": { "@type": "Organization", "name": "Kartari Exim" },
+  "publisher": { "@type": "Organization", "name": "Kartari Exim", "url": "https://kartariexim.com" },
+  "datePublished": "2026-04-20",
+  "description": "India does not grow GM soybeans commercially — making it one of the few large-scale sources of naturally Non-GMO soybean meal in the world. Here is why that matters for importers."
+}
+      `}} />
+
+      <h1 className="text-4xl md:text-5xl font-bold text-champagne-400 mb-6">
+        Non-GMO Soybean Meal from India — Why It Matters for Your Business
+      </h1>
+
+      <p className="text-platinum-300 leading-relaxed mb-8">
+        When buyers ask whether Indian Soya DOC is Non-GMO, the answer is straightforward — <strong className="text-white">India does not commercially cultivate genetically modified soybeans</strong>. This is not a marketing claim. It is a regulatory fact. India's government has not approved GM soybean cultivation for commercial farming, which means every soybean grown and processed in India is naturally Non-GMO by default.
+      </p>
+
+      <h2 className="text-2xl font-bold text-white mb-4">Why the Global Market Cares About Non-GMO</h2>
+      <p className="text-platinum-300 leading-relaxed mb-6">
+        The world's two largest soybean meal exporters — the United States and Brazil — predominantly grow GM soybean varieties. Argentina, the third largest, also grows GM soy almost exclusively. This means that for buyers who require Non-GMO certified soybean meal — whether for regulatory, market preference, or brand positioning reasons — the sourcing options are limited.
+      </p>
+      <p className="text-platinum-300 leading-relaxed mb-8">
+        This is where India holds a structural competitive advantage. Indian Soya DOC is Non-GMO at the source, without requiring expensive identity preservation programs or segregated supply chains that add cost in other origins.
+      </p>
+
+      <h2 className="text-2xl font-bold text-white mb-4">Who Needs Non-GMO Soybean Meal?</h2>
+      <div className="space-y-4 mb-8">
+        {[
+          ['European feed manufacturers', 'The EU has strict labelling requirements for GMO content. Feed mills supplying organic or Non-GMO certified products require Non-GMO sourcing throughout their supply chain.'],
+          ['Organic poultry and livestock producers', 'Certified organic production standards in most markets prohibit the use of GM feed ingredients. Non-GMO soybean meal is a core requirement.'],
+          ['Premium and specialty food brands', 'Brands producing Non-GMO certified eggs, poultry, dairy, or aquaculture products need to source Non-GMO feed to maintain their certification.'],
+          ['Middle East and Southeast Asian markets', 'Several markets in the Middle East and Southeast Asia have growing consumer awareness around GMO labelling and premium Non-GMO products.'],
+          ['Japanese and Korean buyers', 'Japan and South Korea have some of the strictest GMO labelling regulations in Asia and represent consistent buyers of Non-GMO soybean meal from India.'],
+        ].map(([who, why]) => (
+          <div key={who} className="bg-midnight-800 rounded-xl p-5">
+            <p className="font-semibold text-champagne-400 mb-2">{who}</p>
+            <p className="text-platinum-300 text-sm">{why}</p>
+          </div>
+        ))}
+      </div>
+
+      <h2 className="text-2xl font-bold text-white mb-4">India vs Other Origins — Non-GMO Comparison</h2>
+      <div className="bg-midnight-800 rounded-xl p-6 mb-8 overflow-x-auto">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="border-b border-champagne-800/30">
+              {['Origin', 'GMO Status', 'Non-GMO Premium Required?'].map(h => (
+                <th key={h} className="text-left text-champagne-400 pb-3 pr-4">{h}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody className="text-platinum-300">
+            {[
+              ['India', 'Naturally Non-GMO', 'No — Non-GMO by default'],
+              ['USA', 'Predominantly GM', 'Yes — identity preserved supply chain needed'],
+              ['Brazil', 'Predominantly GM', 'Yes — Non-GMO segregation required'],
+              ['Argentina', 'Almost entirely GM', 'Yes — very limited Non-GMO availability'],
+            ].map(([origin, status, premium], i) => (
+              <tr key={i} className="border-b border-midnight-700">
+                <td className="py-3 pr-4 font-semibold text-white">{origin}</td>
+                <td className="py-3 pr-4">{status}</td>
+                <td className="py-3">{premium}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <h2 className="text-2xl font-bold text-white mb-4">What Documentation Confirms Non-GMO Status?</h2>
+      <p className="text-platinum-300 leading-relaxed mb-4">
+        When sourcing Non-GMO Soya DOC from India, the following documents confirm its status:
+      </p>
+      <ul className="space-y-3 text-platinum-300 mb-10">
+        {[
+          'Certificate of Origin (COO) — confirms product is of Indian origin',
+          'Phytosanitary Certificate — issued by the Indian government',
+          'Certificate of Analysis (COA) — from an NABL accredited laboratory',
+          'Non-GMO declaration letter from the exporter on company letterhead',
+          'For premium markets — third party PCR testing available on request',
+        ].map((item, i) => (
+          <li key={i} className="flex gap-3">
+            <span className="text-champagne-400 font-bold flex-shrink-0">✓</span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+
+      <Link
+        to="/products/soybean-meal"
+        className="inline-block bg-gradient-to-r from-champagne-500 to-luxury-500 text-midnight-900 font-semibold px-8 py-4 rounded-full hover:opacity-90 transition-all"
+      >
+        Request Non-GMO Soya DOC from Kartari Exim →
+      </Link>
+    </>
+  ),
+
+  'top-5-countries-importing-soybean-meal-india': (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Top 5 Countries Importing Soybean Meal from India",
+  "author": { "@type": "Organization", "name": "Kartari Exim" },
+  "publisher": { "@type": "Organization", "name": "Kartari Exim", "url": "https://kartariexim.com" },
+  "datePublished": "2026-04-20",
+  "description": "India exports soybean meal to dozens of countries. These five markets consistently import the highest volumes — and understanding why can help you benchmark your sourcing strategy."
+}
+      `}} />
+
+      <h1 className="text-4xl md:text-5xl font-bold text-champagne-400 mb-6">
+        Top 5 Countries Importing Soybean Meal from India
+      </h1>
+
+      <p className="text-platinum-300 leading-relaxed mb-8">
+        India is one of the world's significant exporters of soybean meal (Soya DOC), with exports fluctuating based on domestic prices, global demand, and the competitiveness of Indian meal against South American origins. In January 2026 alone, India's soymeal exports jumped 484% year-on-year to 336,390 tonnes as global prices made Indian Soya DOC highly competitive. Here are the five countries that have historically been the largest and most consistent importers of Indian soybean meal.
+      </p>
+
+      {[
+        {
+          rank: '1',
+          country: 'Bangladesh',
+          flag: '🇧🇩',
+          why: 'Bangladesh is India\'s largest and most consistent buyer of Soya DOC. Geographic proximity makes India the most cost-effective origin — shipping from Nhava Sheva or Kolkata port to Chittagong takes just 2–4 days. Bangladesh has a large and growing poultry industry, and its feed manufacturers are familiar with Indian Soya DOC specifications. The trade relationship between India and Bangladesh in agricultural commodities is long established and deeply integrated.',
+          keyFact: 'Proximity and established trade relationships make Bangladesh India\'s most reliable soybean meal buyer year after year.',
+        },
+        {
+          rank: '2',
+          country: 'South Korea',
+          flag: '🇰🇷',
+          why: 'South Korea is one of India\'s top buyers for Non-GMO soybean meal specifically. Korean feed manufacturers and food producers have strict GMO labelling regulations and consistent demand for Non-GMO certified ingredients. Indian Soya DOC — naturally Non-GMO — competes strongly against US and Brazilian origins for this premium segment. South Korea\'s advanced aquaculture and poultry sectors drive steady import volumes.',
+          keyFact: 'South Korea\'s strict GMO labelling laws make India\'s naturally Non-GMO Soya DOC a preferred choice over GM-origin alternatives.',
+        },
+        {
+          rank: '3',
+          country: 'Vietnam',
+          flag: '🇻🇳',
+          why: 'Vietnam has one of Southeast Asia\'s fastest growing livestock and aquaculture sectors. Its shrimp farming industry in particular requires large volumes of high-protein feed ingredients. Indian Soya DOC is competitive in the Vietnamese market due to its Non-GMO status, protein quality, and freight advantages over South American origins. Vietnam\'s feed manufacturers have been increasing imports from India as domestic animal protein consumption rises.',
+          keyFact: 'Vietnam\'s booming aquaculture and shrimp farming sectors drive consistent demand for Indian soybean meal.',
+        },
+        {
+          rank: '4',
+          country: 'Indonesia',
+          flag: '🇮🇩',
+          why: 'Indonesia is the world\'s fourth most populous country with a large and growing poultry industry. Its feed manufacturers import significant quantities of soybean meal to meet domestic demand that exceeds local soy production. India competes with the US, Argentina, and Brazil for Indonesia\'s import market. When Indian prices are competitive — as they were in early 2026 — Indian Soya DOC gains significant market share.',
+          keyFact: 'Indonesia\'s large poultry sector creates consistent import demand, with India gaining share when prices are competitive.',
+        },
+        {
+          rank: '5',
+          country: 'Iran',
+          flag: '🇮🇷',
+          why: 'Iran has historically been a significant buyer of Indian soybean meal, driven by its large livestock and poultry sector. Iran\'s import capacity fluctuates based on sanctions-related payment challenges and currency availability. When trade conditions are favourable, Iran represents substantial demand for Indian Soya DOC. Iranian buyers are price-sensitive and volume-oriented, typically buying in large container quantities.',
+          keyFact: 'Iran is a volume buyer when trade conditions permit, representing significant upside demand for Indian Soya DOC exporters.',
+        },
+      ].map((item) => (
+        <div key={item.rank} className="bg-midnight-800 rounded-xl p-6 mb-6">
+          <div className="flex items-center gap-3 mb-3">
+            <span className="text-3xl font-bold text-champagne-400">#{item.rank}</span>
+            <span className="text-2xl">{item.flag}</span>
+            <h2 className="text-2xl font-bold text-white">{item.country}</h2>
+          </div>
+          <p className="text-platinum-300 leading-relaxed mb-4 text-sm">{item.why}</p>
+          <div className="border-t border-champagne-800/30 pt-3">
+            <p className="text-champagne-400 text-sm font-semibold">Key insight: <span className="text-platinum-300 font-normal">{item.keyFact}</span></p>
+          </div>
+        </div>
+      ))}
+
+      <h2 className="text-2xl font-bold text-white mb-4 mt-4">What This Means for Buyers</h2>
+      <p className="text-platinum-300 leading-relaxed mb-6">
+        India's soybean meal export markets are concentrated in Asia — particularly South and Southeast Asia where freight costs from India are significantly lower than from South America. If you are an importer in any of these markets, Indian Soya DOC is worth evaluating not just on price but on total landed cost including freight, insurance, and documentation.
+      </p>
+      <p className="text-platinum-300 leading-relaxed mb-10">
+        Kartari Exim exports Non-GMO Soya DOC to buyers across Asia, the Middle East, and Africa. We handle all export documentation and can provide FOB, CFR, or CIF pricing to your destination port. Contact us with your requirement and we will respond within 24 hours.
+      </p>
+
+      <Link
+        to="/products/soybean-meal"
+        className="inline-block bg-gradient-to-r from-champagne-500 to-luxury-500 text-midnight-900 font-semibold px-8 py-4 rounded-full hover:opacity-90 transition-all"
+      >
+        Get a quote from Kartari Exim →
+      </Link>
+    </>
+  ),
+
+  'soybean-meal-prices-rising-india-2026': (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Why Soybean Meal Prices in India Are Rising in 2026 — 7 Key Reasons",
+  "author": { "@type": "Organization", "name": "Kartari Exim" },
+  "publisher": { "@type": "Organization", "name": "Kartari Exim", "url": "https://kartariexim.com" },
+  "datePublished": "2026-04-20",
+  "description": "Soybean meal prices in India have risen sharply since January 2026. Here are the 7 key reasons behind the increase, from a smaller kharif crop to export demand and NCDEX futures suspension."
+}
+      `}} />
+
+      <h1 className="text-4xl md:text-5xl font-bold text-champagne-400 mb-6">
+        Why Soybean Meal Prices in India Are Rising in 2026 — 7 Key Reasons
+      </h1>
+
+      <p className="text-platinum-300 leading-relaxed mb-8">
+        If you have been tracking Soya DOC prices in India since the start of 2026, you will have noticed a consistent upward trend. As of March 2026, NCDEX spot prices stand at <strong className="text-white">₹40,500/MT for SBM 46%</strong> and <strong className="text-white">₹44,000/MT for HiPro 48%</strong> — a sharp recovery from the lows seen in early 2025. Here are the seven factors driving this increase, and what it means for buyers sourcing from India.
+      </p>
+
+      {[
+        {
+          title: '1. Smaller Kharif 2025 Crop',
+          body: 'Soybean is a kharif crop grown during India\'s monsoon season across Madhya Pradesh, Maharashtra, and Rajasthan. The 2025 kharif harvest came in smaller than expected, meaning processors have less raw soybean to crush. Less raw material at the input stage directly tightens Soya DOC supply at the output stage.',
+        },
+        {
+          title: '2. Crushing Plants Buying Aggressively',
+          body: 'With limited domestic soybean availability, crushing plants have been competing for the reduced supply, bidding prices higher at the mandi level. This increased competition for raw soybean pushes up the cost of the primary input, which processors pass through directly into Soya DOC pricing.',
+        },
+        {
+          title: '3. MSP Acting as a Price Floor',
+          body: 'The government\'s Minimum Support Price (MSP) for kharif 2025 soybean is ₹5,328 per quintal. When market prices in mandis trade near or below MSP, farmers tend to withhold their stock rather than sell at a loss. This reduces the volume reaching the market and supports prices from below.',
+        },
+        {
+          title: '4. Rising Soya Oil Import Costs',
+          body: 'India imports a significant share of its soybean oil requirement. When global soya oil prices rise, domestic oil prices strengthen too, making the overall crushing economics more attractive for processors. This incentivises higher demand for raw soybean, which in turn lifts Soya DOC prices as a co-product of the crushing process.',
+        },
+        {
+          title: '5. January Export Surge',
+          body: 'India\'s soymeal exports jumped 484% year-on-year in January 2026, reaching 336,390 tonnes, as a rally in global prices made Indian Soya DOC highly competitive for international buyers. When large volumes move to export markets, less Soya DOC remains for domestic feed manufacturers — tightening local supply and pushing up domestic prices.',
+        },
+        {
+          title: '6. NCDEX Futures Suspended',
+          body: 'As per SEBI directives, futures and options contracts in soybean have been suspended until March 31, 2026. Without an active futures market, processors and traders lose the ability to hedge their positions. This reduces price transparency and often pushes buyers toward securing physical stock at higher spot prices rather than risk being caught short.',
+        },
+        {
+          title: '7. Growing Domestic Poultry Demand',
+          body: 'India\'s poultry, dairy, and aquaculture sectors continue to expand steadily year over year, with animal feed demand projected to grow roughly 3% in MY 2025/26. This means baseline domestic demand for Soya DOC keeps rising regardless of supply conditions — so any supply tightness lands on a demand base that was already growing.',
+        },
+      ].map((item) => (
+        <div key={item.title} className="bg-midnight-800 rounded-xl p-6 mb-5">
+          <h3 className="text-lg font-bold text-champagne-400 mb-3">{item.title}</h3>
+          <p className="text-platinum-300 text-sm leading-relaxed">{item.body}</p>
+        </div>
+      ))}
+
+      <h2 className="text-2xl font-bold text-white mb-4 mt-8">Where Prices Stand Today</h2>
+      <p className="text-platinum-300 leading-relaxed mb-6">
+        Current NCDEX prices of ₹40,500/MT (SBM 46%) and ₹44,000/MT (HiPro 48%) represent a strong recovery from the record low of ₹28,600/MT seen in March 2025, though they remain below the all-time high of ₹51,000/MT recorded in November 2023. This suggests there is still room for movement in either direction depending on how the kharif 2026 crop develops and how export demand evolves through the year.
+      </p>
+
+      <h2 className="text-2xl font-bold text-white mb-4">What This Means for Buyers</h2>
+      <p className="text-platinum-300 leading-relaxed mb-10">
+        For international buyers, the rise in domestic prices makes export margins tighter — but it also signals genuine quality demand rather than oversupply. Buyers working with established exporters who can lock in pricing and provide consistent supply will be better positioned than those trying to find spot deals during periods of tight domestic availability. Kartari Exim monitors these market conditions closely and can advise on the best timing for bulk orders.
+      </p>
+
+      <Link
+        to="/products/soybean-meal"
+        className="inline-block bg-gradient-to-r from-champagne-500 to-luxury-500 text-midnight-900 font-semibold px-8 py-4 rounded-full hover:opacity-90 transition-all"
+      >
+        Get a quote from Kartari Exim →
+      </Link>
+    </>
+  ),
 };
 
 const BlogPostPage = () => {
@@ -319,19 +683,28 @@ const BlogPostPage = () => {
   if (!post || !content) {
     return (
       <div className="bg-midnight-900 text-platinum-100 min-h-screen">
-        <Header />
+        <Helmet>
+          <title>Article Not Found | Kartari Exim</title>
+          <meta name="robots" content="noindex, nofollow" />
+        </Helmet>
         <main className="pt-32 px-4 md:px-8 max-w-3xl mx-auto pb-20">
           <h1 className="text-3xl font-bold text-champagne-400 mb-4">Article not found</h1>
           <Link to="/blog" className="text-champagne-400 hover:underline">← Back to blog</Link>
         </main>
-        <Footer />
       </div>
     );
   }
 
   return (
     <div className="bg-midnight-900 text-platinum-100 min-h-screen">
-      <Header />
+      <Helmet>
+        <title>{post.title} | Kartari Exim</title>
+        <meta name="description" content={post.excerpt} />
+        <link rel="canonical" href={`https://kartariexim.com/blog/${post.slug}`} />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:type" content="article" />
+      </Helmet>
       <main className="pt-32 px-4 md:px-8 max-w-3xl mx-auto pb-20">
 
         <Link to="/blog" className="text-champagne-400 text-sm hover:underline mb-8 inline-block">

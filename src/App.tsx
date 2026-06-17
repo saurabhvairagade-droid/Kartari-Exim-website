@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
 import { LenisProvider } from './hooks';
 
@@ -10,60 +10,96 @@ import WhyChooseUs from './components/WhyChooseUs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-import AnimalFeedPage from './Pages/AnimalFeedPage';
-import SpicesPage from './Pages/SpicesPage';
-import VegetablesPage from './Pages/VegetablesPage';
-import FruitsPage from './Pages/FruitsPage';
-import BasmatiRicePage from './Pages/BasmatiRicePage';
-import ProcessedFoodPage from './Pages/ProcessedFoodPage';
-import BlogPage from './Pages/BlogPage';
-import BlogPostPage from './Pages/BlogPostPage';
-import DehydratedOnionFlakesPage from './Pages/DehydratedOnionFlakesPage';
+// Lazy load pages for better performance and smaller initial bundle size
+const AnimalFeedPage = lazy(() => import('./Pages/AnimalFeedPage'));
+const SpicesPage = lazy(() => import('./Pages/SpicesPage'));
+const VegetablesPage = lazy(() => import('./Pages/VegetablesPage'));
+const FruitsPage = lazy(() => import('./Pages/FruitsPage'));
+const BasmatiRicePage = lazy(() => import('./Pages/BasmatiRicePage'));
+const ProcessedFoodPage = lazy(() => import('./Pages/ProcessedFoodPage'));
+const BlogPage = lazy(() => import('./Pages/BlogPage'));
+const BlogPostPage = lazy(() => import('./Pages/BlogPostPage'));
+const DehydratedOnionFlakesPage = lazy(() => import('./Pages/DehydratedOnionFlakesPage'));
 
+// Loading component
+const PageLoader = () => (
+  <div className="min-h-[60vh] flex items-center justify-center bg-midnight-900">
+    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-champagne-400"></div>
+  </div>
+);
+
+import { Helmet } from 'react-helmet';
+import { useLocation } from 'react-router-dom';
+
+const DynamicCanonical = () => {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+  const canonicalUrl = `https://kartariexim.com${isHome ? '/' : location.pathname}`;
+  return (
+    <Helmet>
+      <link rel="canonical" href={canonicalUrl} />
+    </Helmet>
+  );
+};
+
+const PrerenderTrigger = () => {
+  const location = useLocation();
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      document.dispatchEvent(new Event('custom-render-trigger'));
+    }, 1500);
+    return () => clearTimeout(timer);
+  }, [location]);
+  return null;
+};
 
 function App() {
   return (
     <LenisProvider>
       <Router>
+        <DynamicCanonical />
+        <PrerenderTrigger />
         <div className="min-h-screen flex flex-col bg-midnight-900 text-white">
           <Header />
 
-        <main className="flex-grow">
-          <Routes>
-            {/* Homepage */}
-            <Route
-              path="/"
-              element={
-                <>
-                  <Hero />
-                  <About />
-                  <Products />
-                  <WhyChooseUs />
-                  <Contact />
-                </>
-              }
-            />
+          <main className="flex-grow">
+            <Suspense fallback={<PageLoader />}>
+              <Routes>
+                {/* Homepage */}
+                <Route
+                  path="/"
+                  element={
+                    <>
+                      <Hero />
+                      <About />
+                      <Products />
+                      <WhyChooseUs />
+                      <Contact />
+                    </>
+                  }
+                />
 
-            {/* Static product collection pages */}
-            <Route path="/products/soybean-meal" element={<AnimalFeedPage />} />
-            <Route path="/products/spices" element={<SpicesPage />} />
-            <Route path="/products/vegetables" element={<VegetablesPage />} />
-            <Route path="/products/fruits" element={<FruitsPage />} />
-            <Route path="/products/basmati-rice" element={<BasmatiRicePage />} />
-            <Route path="/products/gourmet-processed-foods" element={<ProcessedFoodPage />} />
+                {/* Static product collection pages */}
+                <Route path="/products/soybean-meal" element={<AnimalFeedPage />} />
+                <Route path="/products/spices" element={<SpicesPage />} />
+                <Route path="/products/vegetables" element={<VegetablesPage />} />
+                <Route path="/products/fruits" element={<FruitsPage />} />
+                <Route path="/products/basmati-rice" element={<BasmatiRicePage />} />
+                <Route path="/products/gourmet-processed-foods" element={<ProcessedFoodPage />} />
 
-            {/* Blog */}
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/blog/:slug" element={<BlogPostPage />} />
+                {/* Blog */}
+                <Route path="/blog" element={<BlogPage />} />
+                <Route path="/blog/:slug" element={<BlogPostPage />} />
 
-            {/* Individual product pages */}
-            <Route path="/products/dehydrated-onion-flakes" element={<DehydratedOnionFlakesPage />} />
-          </Routes>
-        </main>
+                {/* Individual product pages */}
+                <Route path="/products/dehydrated-onion-flakes" element={<DehydratedOnionFlakesPage />} />
+              </Routes>
+            </Suspense>
+          </main>
 
-        <Footer />
-      </div>
-    </Router>
+          <Footer />
+        </div>
+      </Router>
     </LenisProvider>
   );
 }

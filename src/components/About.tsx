@@ -61,8 +61,12 @@ const About = () => {
           <motion.div className="relative" initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.35, delay: 0.2 }} viewport={{ once: true }}>
             <div className="bg-gradient-to-br from-midnight-800/50 to-midnight-700/50 backdrop-blur-sm rounded-3xl p-8 border border-champagne-800/30 shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1678182451047-196f22a4143e?auto=format&q=80&w=800"
+                src="https://images.unsplash.com/photo-1678182451047-196f22a4143e?auto=format,compress&q=60&w=800"
                 alt="Container Shipping Dock"
+                width="600"
+                height="384"
+                loading="lazy"
+                decoding="async"
                 className="w-full h-96 object-cover rounded-2xl shadow-xl"
               />
             </div>

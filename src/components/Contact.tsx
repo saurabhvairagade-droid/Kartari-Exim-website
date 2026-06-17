@@ -276,6 +276,7 @@ const Contact = () => {
                     value={formData.firstName}
                     onChange={handleInputChange}
                     required
+                    aria-label="First Name"
                     className="w-full px-4 py-3 bg-midnight-800/60 border border-champagne-800/50 rounded-xl focus:ring-2 focus:ring-champagne-500 focus:border-transparent text-white placeholder-platinum-400 transition-all duration-300"
                     placeholder="Your first name"
                   />
@@ -290,6 +291,7 @@ const Contact = () => {
                     value={formData.lastName}
                     onChange={handleInputChange}
                     required
+                    aria-label="Last Name"
                     className="w-full px-4 py-3 bg-midnight-800/60 border border-champagne-800/50 rounded-xl focus:ring-2 focus:ring-champagne-500 focus:border-transparent text-white placeholder-platinum-400 transition-all duration-300"
                     placeholder="Your last name"
                   />
@@ -306,6 +308,7 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleInputChange}
                   required
+                  aria-label="Business Email"
                   className="w-full px-4 py-3 bg-midnight-800/60 border border-champagne-800/50 rounded-xl focus:ring-2 focus:ring-champagne-500 focus:border-transparent text-white placeholder-platinum-400 transition-all duration-300"
                   placeholder="your@company.com"
                 />
@@ -321,6 +324,7 @@ const Contact = () => {
                   value={formData.phone}
                   onChange={handleInputChange}
                   required
+                  aria-label="Phone or WhatsApp"
                   className="w-full px-4 py-3 bg-midnight-800/60 border border-champagne-800/50 rounded-xl focus:ring-2 focus:ring-champagne-500 focus:border-transparent text-white placeholder-platinum-400 transition-all duration-300"
                   placeholder="+1 234 567 8900 (include country code)"
                 />
@@ -337,6 +341,7 @@ const Contact = () => {
                     value={formData.company}
                     onChange={handleInputChange}
                     required
+                    aria-label="Company Name"
                     className="w-full px-4 py-3 bg-midnight-800/60 border border-champagne-800/50 rounded-xl focus:ring-2 focus:ring-champagne-500 focus:border-transparent text-white placeholder-platinum-400 transition-all duration-300"
                     placeholder="Your company name"
                   />
@@ -351,6 +356,7 @@ const Contact = () => {
                     value={formData.country}
                     onChange={handleInputChange}
                     required
+                    aria-label="Country"
                     className="w-full px-4 py-3 bg-midnight-800/60 border border-champagne-800/50 rounded-xl focus:ring-2 focus:ring-champagne-500 focus:border-transparent text-white placeholder-platinum-400 transition-all duration-300"
                     placeholder="Your country"
                   />

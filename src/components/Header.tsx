@@ -36,9 +36,9 @@ const Header = () => {
               className="h-12 w-auto filter brightness-110"
             />
             <div>
-              <h1 className="text-2xl font-serif font-bold bg-gradient-to-r from-champagne-400 to-luxury-500 bg-clip-text text-transparent">
+              <span className="text-2xl font-serif font-bold bg-gradient-to-r from-champagne-400 to-luxury-500 bg-clip-text text-transparent block">
                 Kartari Exim
-              </h1>
+              </span>
               <p className="text-xs text-champagne-400 font-medium tracking-wider uppercase">
                 Premium Agricultural Exports
               </p>

@@ -333,6 +333,7 @@ const AnimalFeedPage = () => {
                 type="text"
                 name="name"
                 placeholder="Your Name"
+                aria-label="Your Name"
                 required
                 value={formData.name}
                 onChange={handleChange}
@@ -342,6 +343,7 @@ const AnimalFeedPage = () => {
                 type="email"
                 name="email"
                 placeholder="Email Address"
+                aria-label="Email Address"
                 required
                 value={formData.email}
                 onChange={handleChange}
@@ -351,6 +353,7 @@ const AnimalFeedPage = () => {
                 type="tel"
                 name="phone"
                 placeholder="Phone / WhatsApp (include country code)"
+                aria-label="Phone Number"
                 required
                 value={formData.phone}
                 onChange={handleChange}
@@ -360,6 +363,7 @@ const AnimalFeedPage = () => {
                 type="text"
                 name="company"
                 placeholder="Company Name"
+                aria-label="Company Name"
                 value={formData.company}
                 onChange={handleChange}
                 className="p-4 rounded bg-midnight-700 border border-champagne-500 text-white md:col-span-2"
@@ -367,6 +371,7 @@ const AnimalFeedPage = () => {
               <textarea
                 name="message"
                 placeholder="Your requirement — quantity, destination country, packaging preference"
+                aria-label="Message"
                 rows={5}
                 required
                 value={formData.message}

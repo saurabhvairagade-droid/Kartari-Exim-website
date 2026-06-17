@@ -1,15 +1,49 @@
-import React, { useEffect } from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import React, { useEffect, useState } from 'react';
 
 const BasmatiRicePage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const form = e.target as HTMLFormElement;
+    const data = new FormData(form);
+
+    try {
+      await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data as any).toString(),
+      });
+      setIsSubmitting(false);
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', company: '', message: '' });
+      setTimeout(() => setSubmitStatus('idle'), 5000);
+    } catch (error) {
+      setIsSubmitting(false);
+      setSubmitStatus('error');
+    }
+  };
+
   return (
     <div className="bg-midnight-900 text-platinum-100 min-h-screen">
-      <Header />
 
       <main className="pt-32 px-4 md:px-8 max-w-7xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-champagne-400 mb-4">
@@ -23,8 +57,12 @@ const BasmatiRicePage = () => {
         <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-6 items-start bg-midnight-800 rounded-xl p-6 mb-20">
           <div>
             <img
-              src="https://images.unsplash.com/photo-1723475158229-894679ca024e?auto=format&q=80&w=800"
+              src="https://images.unsplash.com/photo-1723475158229-894679ca024e?auto=format,compress&q=60&w=800"
               alt="1121 Sella White / Creamy"
+              width="384"
+              height="256"
+              fetchPriority="high"
+              decoding="async"
               className="w-96 h-64 object-cover rounded-lg shadow"
             />
           </div>
@@ -48,8 +86,12 @@ const BasmatiRicePage = () => {
         <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-6 items-start bg-midnight-800 rounded-xl p-6 mb-20">
           <div>
             <img
-              src="https://images.unsplash.com/photo-1627482265910-5c0ff6bee088?auto=compress&cs=tinysrgb&w=600"
+              src="https://images.unsplash.com/photo-1627482265910-5c0ff6bee088?auto=format,compress&q=60&w=800"
               alt="1121 Golden Sella Basmati"
+              width="384"
+              height="256"
+              loading="lazy"
+              decoding="async"
               className="w-96 h-64 object-cover rounded-lg shadow"
             />
           </div>
@@ -73,8 +115,12 @@ const BasmatiRicePage = () => {
         <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] gap-6 items-start bg-midnight-800 rounded-xl p-6 mb-20">
           <div>
             <img
-              src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=compress&cs=tinysrgb&w=600"
+              src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format,compress&q=60&w=800"
               alt="1121 Steam Basmati"
+              width="384"
+              height="256"
+              loading="lazy"
+              decoding="async"
               className="w-96 h-64 object-cover rounded-lg shadow"
             />
           </div>
@@ -102,32 +148,71 @@ const BasmatiRicePage = () => {
           <p className="text-platinum-300 mb-6">
             Ready to import our premium basmati rice? Let us know your quantity and packaging requirements.
           </p>
-          <form className="grid md:grid-cols-2 gap-6">
+
+          {submitStatus === 'success' && (
+            <div className="mb-6 p-4 bg-green-900/50 border border-green-500 rounded-lg text-green-300">
+              Thank you! Your inquiry has been submitted successfully.
+            </div>
+          )}
+          
+          {submitStatus === 'error' && (
+            <div className="mb-6 p-4 bg-red-900/50 border border-red-500 rounded-lg text-red-300">
+              Something went wrong. Please try again later.
+            </div>
+          )}
+
+          <form 
+            onSubmit={handleSubmit}
+            name="basmati-rice-inquiry"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            className="grid md:grid-cols-2 gap-6"
+          >
+            <input type="hidden" name="form-name" value="basmati-rice-inquiry" />
+            <p hidden><input name="bot-field" /></p>
             <input
               type="text"
+              name="name"
               placeholder="Your Name"
+              required
+              value={formData.name}
+              onChange={handleChange}
               className="p-4 rounded bg-midnight-700 border border-champagne-500 text-white"
             />
             <input
               type="email"
+              name="email"
               placeholder="Email Address"
+              required
+              value={formData.email}
+              onChange={handleChange}
               className="p-4 rounded bg-midnight-700 border border-champagne-500 text-white"
             />
             <input
               type="text"
+              name="company"
               placeholder="Company Name"
+              required
+              value={formData.company}
+              onChange={handleChange}
               className="p-4 rounded bg-midnight-700 border border-champagne-500 text-white md:col-span-2"
             />
             <textarea
+              name="message"
               placeholder="Your Message / Product Requirement"
               rows={5}
+              required
+              value={formData.message}
+              onChange={handleChange}
               className="p-4 rounded bg-midnight-700 border border-champagne-500 text-white md:col-span-2"
             />
             <button
               type="submit"
-              className="bg-gradient-to-r from-champagne-500 to-luxury-500 text-midnight-900 font-semibold px-6 py-3 rounded-full hover:opacity-90 transition-all md:col-span-2"
+              disabled={isSubmitting}
+              className="bg-gradient-to-r from-champagne-500 to-luxury-500 text-midnight-900 font-semibold px-6 py-3 rounded-full hover:opacity-90 transition-all md:col-span-2 disabled:opacity-50"
             >
-              Send Inquiry
+              {isSubmitting ? 'Sending...' : 'Send Inquiry'}
             </button>
           </form>
         </div>

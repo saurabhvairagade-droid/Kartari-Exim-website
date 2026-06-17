@@ -13,7 +13,7 @@ const Products = () => {
       slug: 'spices',
       description: 'Hand-selected premium spices including turmeric, red chilli, and heritage masala blends crafted by master spice artisans.',
       icon: ChefHat,
-      image: 'https://images.pexels.com/photos/4198711/pexels-photo-4198711.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: 'https://images.pexels.com/photos/4198711/pexels-photo-4198711.jpeg?auto=compress&cs=tinysrgb&w=800',
       premium: false 
     },
     {
@@ -29,7 +29,7 @@ const Products = () => {
       slug: 'vegetables',
       description: 'Premium Nasik onions, G4 green chilies, and seasonal vegetables sourced from certified organic farms across India.',
       icon: Leaf,
-      image: 'https://images.unsplash.com/photo-1668295037469-8b0e8d11cd2a?auto=compress&cs=tinysrgb&w=600',
+      image: 'https://images.unsplash.com/photo-1668295037469-8b0e8d11cd2a?auto=format,compress&q=60&w=800',
       premium: false
     },
     {
@@ -37,7 +37,7 @@ const Products = () => {
       slug: 'fruits',
       description: 'Alphonso mangoes, Kashmir apples, pomegranates, and G9 banana.',
       icon: Apple,
-      image: 'https://images.pexels.com/photos/20349779/pexels-photo-20349779.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: 'https://images.pexels.com/photos/20349779/pexels-photo-20349779.jpeg?auto=compress&cs=tinysrgb&w=800',
       premium: true
     },
     {
@@ -45,7 +45,7 @@ const Products = () => {
       slug: 'gourmet-processed-foods',
       description: 'Jaggery powder, premium dried fruits, and ready-to-serve delicacies.',
       icon: Carrot,
-      image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800',
       premium: false
     },
     {
@@ -53,7 +53,7 @@ const Products = () => {
       slug: 'soybean-meal',
       description: 'High-protein Soya DOC (De-Oiled Cake) with 46–50% protein. Trusted soybean meal supplier from India for poultry, cattle, dairy and fish feed.',
       icon: Tractor,
-      image: 'https://images.pexels.com/photos/1153756/pexels-photo-1153756.jpeg?auto=compress&cs=tinysrgb&w=600',
+      image: 'https://images.pexels.com/photos/1153756/pexels-photo-1153756.jpeg?auto=compress&cs=tinysrgb&w=800',
       premium: false
     }
   ];
@@ -86,6 +86,10 @@ const Products = () => {
                   <img 
                     src={collection.image} 
                     alt={collection.name} 
+                    width="400"
+                    height="256"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-midnight-900/80 via-transparent to-transparent"></div>

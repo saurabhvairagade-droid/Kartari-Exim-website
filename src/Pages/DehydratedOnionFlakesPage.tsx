@@ -323,28 +323,29 @@ const DehydratedOnionFlakesPage = () => {
               <p hidden><input name="bot-field" /></p>
 
               <input
-                type="text" name="name" placeholder="Your Name" required
+                type="text" name="name" placeholder="Your Name" aria-label="Your Name" required
                 value={formData.name} onChange={handleChange}
                 className="p-4 rounded bg-midnight-700 border border-champagne-500 text-white"
               />
               <input
-                type="email" name="email" placeholder="Email Address" required
+                type="email" name="email" placeholder="Email Address" aria-label="Email Address" required
                 value={formData.email} onChange={handleChange}
                 className="p-4 rounded bg-midnight-700 border border-champagne-500 text-white"
               />
               <input
-                type="tel" name="phone" placeholder="Phone / WhatsApp (include country code)" required
+                type="tel" name="phone" placeholder="Phone / WhatsApp (include country code)" aria-label="Phone Number" required
                 value={formData.phone} onChange={handleChange}
                 className="p-4 rounded bg-midnight-700 border border-champagne-500 text-white md:col-span-2"
               />
               <input
-                type="text" name="company" placeholder="Company Name"
+                type="text" name="company" placeholder="Company Name" aria-label="Company Name"
                 value={formData.company} onChange={handleChange}
                 className="p-4 rounded bg-midnight-700 border border-champagne-500 text-white md:col-span-2"
               />
               <textarea
                 name="message" rows={5} required
                 placeholder="Your requirement — quantity, destination country, packaging preference"
+                aria-label="Message"
                 value={formData.message} onChange={handleChange}
                 className="p-4 rounded bg-midnight-700 border border-champagne-500 text-white md:col-span-2"
               />
