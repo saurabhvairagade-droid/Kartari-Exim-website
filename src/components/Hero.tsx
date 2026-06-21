@@ -39,13 +39,13 @@ const Hero = () => {
           <motion.div className="space-y-8" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
             <motion.div className="space-y-6" variants={itemVariants}>
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight">
-                <motion.span className="block" variants={itemVariants}>Kartari Exim</motion.span>
-                <motion.span className="block leading-snug pb-2 text-4xl md:text-5xl lg:text-6xl bg-gradient-to-r from-champagne-400 via-luxury-400 to-champagne-500 bg-clip-text text-transparent" variants={itemVariants}>
+                <span className="block">Kartari Exim</span>
+                <span className="block leading-snug pb-2 text-4xl md:text-5xl lg:text-6xl bg-gradient-to-r from-champagne-400 via-luxury-400 to-champagne-500 bg-clip-text text-transparent">
                   Global Trading
-                </motion.span>
-                <motion.span className="block pt-1 text-4xl md:text-5xl lg:text-6xl text-platinum-300" variants={itemVariants}>
+                </span>
+                <span className="block pt-1 text-4xl md:text-5xl lg:text-6xl text-platinum-300">
                   Redefined
-                </motion.span>
+                </span>
               </h1>
               <motion.p className="text-xl md:text-2xl text-platinum-300 leading-relaxed font-light" variants={itemVariants}>
                 Premier import-export company connecting premium Indian food products to over 10 countries worldwide. Kartari Exim leads in essential and processed food exports, delivering quality across 5 continents.
