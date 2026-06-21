@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Wheat, ChefHat, Leaf, Apple, Carrot, Tractor } from 'lucide-react';
+import { Wheat, ChefHat, Leaf, Apple, Carrot, Tractor, UtensilsCrossed } from 'lucide-react';
 import { useFadeIn } from '../hooks/useFadeIn';
 
 const Products = () => {
