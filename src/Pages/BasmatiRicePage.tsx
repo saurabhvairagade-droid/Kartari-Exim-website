@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 const BasmatiRicePage = () => {
   useEffect(() => {
@@ -44,6 +47,14 @@ const BasmatiRicePage = () => {
 
   return (
     <div className="bg-midnight-900 text-platinum-100 min-h-screen">
+      <Helmet>
+        <title>Premium 1121 Basmati Rice Exporter | Golden Sella & Steam | Kartari Exim</title>
+        <meta name="description" content="Exporting premium 1121 Basmati Rice from India. Buy Golden Sella, Steam, and White Sella Basmati in bulk. Trusted global supplier with strict quality checks." />
+        <meta name="keywords" content="1121 basmati rice exporter, golden sella basmati supplier, steam basmati rice india, bulk basmati export" />
+        <meta property="og:title" content="Premium 1121 Basmati Rice Exporter | Kartari Exim" />
+        <meta property="og:description" content="Bulk export of premium 1121 Basmati Rice including Golden Sella and Steam from India." />
+      </Helmet>
+      <Header />
 
       <main className="pt-32 px-4 md:px-8 max-w-7xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-champagne-400 mb-4">
@@ -217,6 +228,7 @@ const BasmatiRicePage = () => {
           </form>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };
