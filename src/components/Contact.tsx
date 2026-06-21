@@ -370,6 +370,7 @@ const Contact = () => {
                   </label>
                   <select 
                     name="productInterest"
+                    aria-label="Select a product"
                     value={formData.productInterest}
                     onChange={handleInputChange}
                     required
@@ -387,6 +388,7 @@ const Contact = () => {
                   </label>
                   <select 
                     name="orderVolume"
+                    aria-label="Select volume"
                     value={formData.orderVolume}
                     onChange={handleInputChange}
                     className="w-full px-4 py-3 bg-midnight-800/60 border border-champagne-800/50 rounded-xl focus:ring-2 focus:ring-champagne-500 focus:border-transparent text-white transition-all duration-300"

@@ -13,47 +13,47 @@ const Products = () => {
       slug: 'spices',
       description: 'Hand-selected premium spices including turmeric, red chilli, and heritage masala blends crafted by master spice artisans.',
       icon: ChefHat,
-      image: 'https://images.pexels.com/photos/4198711/pexels-photo-4198711.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/4198711/pexels-photo-4198711.jpeg?auto=compress&cs=tinysrgb&w=600&q=60',
       premium: false 
     },
     {
       name: 'Basmati Rice',
       slug: 'basmati-rice',
-      description: 'Exclusive basmati varieties, and rare specialty rice cultivated using traditional methods.',
+      description: 'Long-grain 1121 Basmati Rice (Golden Sella, Steam, White)',
       icon: Wheat,
-      image: 'https://images.pexels.com/photos/8108170/pexels-photo-8108170.jpeg?auto=format&q=80&w=800',
+      image: 'https://images.pexels.com/photos/8108170/pexels-photo-8108170.jpeg?auto=format&w=600&q=60',
       premium: true
     },
     {
       name: 'Garden Fresh Vegetables',
       slug: 'vegetables',
-      description: 'Premium Nasik onions, G4 green chilies, and seasonal vegetables sourced from certified organic farms across India.',
+      description: 'Export-grade Red Onions, Garlic, Ginger, and Green Chilies',
       icon: Leaf,
-      image: 'https://images.unsplash.com/photo-1668295037469-8b0e8d11cd2a?auto=format,compress&q=60&w=800',
+      image: 'https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&q=60&w=600',
       premium: false
     },
     {
       name: 'Fruits',
       slug: 'fruits',
-      description: 'Alphonso mangoes, Kashmir apples, pomegranates, and G9 banana.',
+      description: 'Premium Pomegranates, Grapes, Mangoes, and Bananas',
       icon: Apple,
-      image: 'https://images.pexels.com/photos/20349779/pexels-photo-20349779.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/20349779/pexels-photo-20349779.jpeg?auto=compress&cs=tinysrgb&w=600&q=60',
       premium: true
     },
     {
       name: 'Gourmet Processed Foods',
       slug: 'gourmet-processed-foods',
-      description: 'Jaggery powder, premium dried fruits, and ready-to-serve delicacies.',
-      icon: Carrot,
-      image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800',
+      description: 'Ready-to-Eat curries, frozen delicacies, and pickles',
+      icon: UtensilsCrossed,
+      image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&q=60',
       premium: false
     },
     {
       name: 'Animal Feed',
       slug: 'soybean-meal',
-      description: 'High-protein Soya DOC (De-Oiled Cake) with 46–50% protein. Trusted soybean meal supplier from India for poultry, cattle, dairy and fish feed.',
+      description: 'High-protein Soya DOC, Yellow Maize, and Barley',
       icon: Tractor,
-      image: 'https://images.pexels.com/photos/1153756/pexels-photo-1153756.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/1153756/pexels-photo-1153756.jpeg?auto=compress&cs=tinysrgb&w=600&q=60',
       premium: false
     }
   ];

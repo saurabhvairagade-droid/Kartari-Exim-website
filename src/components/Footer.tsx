@@ -28,19 +28,20 @@ const Footer = () => {
               Kartari Exim is a trusted soybean meal and agricultural products exporter from Pune, India — supplying Soya DOC, Basmati Rice, Spices, and Fresh Produce to importers worldwide
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="bg-gradient-to-br from-champagne-500/20 to-luxury-500/20 p-3 rounded-xl text-champagne-400 hover:from-champagne-500/30 hover:to-luxury-500/30 transition-all duration-300">
+              <a href="#" aria-label="Visit our Facebook page" className="bg-gradient-to-br from-champagne-500/20 to-luxury-500/20 p-3 rounded-xl text-champagne-400 hover:from-champagne-500/30 hover:to-luxury-500/30 transition-all duration-300">
                 <Facebook className="h-5 w-5" />
               </a>
               
               <a 
                 href="https://www.linkedin.com/company/kartari-exim/" 
+                aria-label="Visit our LinkedIn page"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-gradient-to-br from-champagne-500/20 to-luxury-500/20 p-3 rounded-xl text-champagne-400 hover:from-champagne-500/30 hover:to-luxury-500/30 transition-all duration-300"
               >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="bg-gradient-to-br from-champagne-500/20 to-luxury-500/20 p-3 rounded-xl text-champagne-400 hover:from-champagne-500/30 hover:to-luxury-500/30 transition-all duration-300">
+              <a href="#" aria-label="Visit our Instagram page" className="bg-gradient-to-br from-champagne-500/20 to-luxury-500/20 p-3 rounded-xl text-champagne-400 hover:from-champagne-500/30 hover:to-luxury-500/30 transition-all duration-300">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
