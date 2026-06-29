@@ -37,6 +37,7 @@ export default defineConfig({
           renderer: '@prerenderer/renderer-puppeteer',
           rendererOptions: {
             renderAfterDocumentEvent: 'custom-render-trigger',
+            renderAfterTime: 10000,
           },
         }),
       ],

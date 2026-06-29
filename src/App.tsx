@@ -40,17 +40,58 @@ const DynamicCanonical = () => {
   const canonicalUrl = `https://kartariexim.com${isHome ? '/' : (location.pathname.endsWith('/') ? location.pathname : location.pathname + '/')}`;
   return (
     <Helmet>
+      <link rel="canonical" href={canonicalUrl} />
     </Helmet>
   );
 };
 
+/**
+ * PrerenderTrigger — polls until the lazy-loaded page content and Helmet
+ * title tag have been injected into the DOM, THEN fires the custom event
+ * that tells @prerenderer/rollup-plugin to snapshot.
+ *
+ * Safety timeout: 8 seconds (fires the event regardless).
+ */
 const PrerenderTrigger = () => {
   const location = useLocation();
   React.useEffect(() => {
-    const timer = setTimeout(() => {
-      document.dispatchEvent(new Event('custom-render-trigger'));
-    }, 1500);
-    return () => clearTimeout(timer);
+    let cancelled = false;
+
+    const isPageReady = () => {
+      // Check 1: Page content has loaded (lazy chunk resolved)
+      // The Suspense fallback is a simple spinner div; real pages have <h1> or <article> tags
+      const hasContent = document.querySelector('main h1, main article, main h2');
+
+      // Check 2: Helmet has injected a page-specific <title> (not the fallback one from index.html)
+      const title = document.querySelector('title');
+      const hasDynamicTitle = title && title.textContent && !title.textContent.includes('Soya DOC, Spices, Basmati Rice');
+
+      // For the homepage, the Hero h1 is eager-loaded; also check Helmet has processed
+      const isHome = location.pathname === '/';
+      const helmetProcessed = document.querySelector('[data-rh="true"]');
+      if (isHome) return !!hasContent && !!helmetProcessed;
+
+      return hasContent && hasDynamicTitle;
+    };
+
+    // Poll every 200ms, max 8 seconds
+    let elapsed = 0;
+    const interval = setInterval(() => {
+      elapsed += 200;
+      if (cancelled) { clearInterval(interval); return; }
+
+      if (isPageReady() || elapsed >= 8000) {
+        clearInterval(interval);
+        // Small extra delay for Helmet to flush any remaining mutations
+        setTimeout(() => {
+          if (!cancelled) {
+            document.dispatchEvent(new Event('custom-render-trigger'));
+          }
+        }, 300);
+      }
+    }, 200);
+
+    return () => { cancelled = true; clearInterval(interval); };
   }, [location]);
   return null;
 };

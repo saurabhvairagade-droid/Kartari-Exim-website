@@ -4,69 +4,43 @@
     <meta charset="UTF-8" />
      <link rel="icon" type="image/png" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- SEO meta tags are now managed by React Helmet -->
+    <!-- Fallback title — React Helmet overrides this per-page at runtime -->
+    <title>Kartari Exim | Agricultural Exporter India — Soya DOC, Spices, Basmati Rice</title>
+    <meta name="description" content="Trusted agricultural exporter from India supplying premium soybean meal, spices, basmati rice, and vegetables worldwide. Get a quote within 24 hours." />
     
     <link rel="preconnect" href="https://images.pexels.com" />
     <link rel="preload" as="image" href="https://images.pexels.com/photos/9705821/pexels-photo-9705821.jpeg?auto=compress&cs=tinysrgb&w=800&q=60" />
+  <!-- Organization schema — applies site-wide -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Soybean Meal (Soya DOC)",
-  "alternateName": ["Soya DOC", "De-Oiled Cake", "SBM 48%"],
-  "description": "Premium Soya DOC (De-Oiled Cake) with 46–48% crude protein. Exported from Pune, India for poultry, cattle, dairy, swine and aquaculture feed. Available in 50kg PP bags or bulk container loads.",
-  "image": "https://kartariexim.com/soyaDOC.png",
-  "brand": {
-    "@type": "Brand",
-    "name": "Kartari Exim"
+  "@type": "Organization",
+  "name": "Kartari Exim",
+  "url": "https://kartariexim.com",
+  "logo": "https://kartariexim.com/Kartari%20Logo.webp",
+  "description": "Trusted agricultural exporter from Pune, India. Supplying soybean meal, spices, basmati rice, fruits, vegetables, and processed foods worldwide.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Pune",
+    "addressRegion": "Maharashtra",
+    "addressCountry": "IN"
   },
-  "manufacturer": {
-    "@type": "Organization",
-    "name": "Kartari Exim",
-    "url": "https://kartariexim.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Pune",
-      "addressRegion": "Maharashtra",
-      "addressCountry": "IN"
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+91-749-904-3190",
+      "contactType": "sales",
+      "areaServed": "IN"
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+971-50-265-9676",
+      "contactType": "sales",
+      "areaServed": "AE"
     }
-  },
-  "offers": {
-    "@type": "Offer",
-    "url": "https://kartariexim.com/products/soybean-meal",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock",
-    "seller": {
-      "@type": "Organization",
-      "name": "Kartari Exim"
-    }
-  },
-  "additionalProperty": [
-    {
-      "@type": "PropertyValue",
-      "name": "Protein Content",
-      "value": "46–48%"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Moisture",
-      "value": "Max 10%"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Crude Fiber",
-      "value": "Max 3%"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Origin",
-      "value": "India"
-    },
-    {
-      "@type": "PropertyValue",
-      "name": "Packaging",
-      "value": "50kg PP bags or bulk"
-    }
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/company/kartari-exim/"
   ]
 }
 </script>
@@ -138,10 +112,7 @@
       <textarea name="message"></textarea>
     </form>
 
-    <div id="root">
-      <!-- Fallback H1 for SEO crawlers that don't run JS. This will be replaced when React mounts -->
-      <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">Kartari Exim | Agricultural Exporter India — Soya DOC, Soybean Meal, Spices, Basmati Rice</h1>
-    </div>
+    <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -1,7 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
 
 const DefaultSeo = () => {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+  const currentUrl = `https://kartariexim.com${isHome ? '/' : (location.pathname.endsWith('/') ? location.pathname : location.pathname + '/')}`;
+
   return (
     <Helmet>
       {/* Primary SEO */}
@@ -17,7 +22,7 @@ const DefaultSeo = () => {
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Kartari Exim" />
       <meta property="og:image" content="https://kartariexim.com/soyaDOC.png" />
-      <meta property="og:url" content="https://kartariexim.com/" />
+      <meta property="og:url" content={currentUrl} />
       
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content="summary_large_image" />
