@@ -53,6 +53,22 @@ const VegetablesPage = () => {
         <meta name="keywords" content="fresh vegetables exporter india, nasik red onion export, g4 green chilli supplier, bulk vegetables india" />
         <meta property="og:title" content="Fresh Indian Vegetables Exporter | Kartari Exim" />
         <meta property="og:description" content="Bulk export of premium Nasik Red Onions and G4 Green Chillies from India." />
+        <script type="application/ld+json">{`
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Fresh Indian Vegetables (Red Onion, Green Chilli)",
+  "description": "Exporting premium fresh vegetables from India including Nasik Red Onions and G4 Green Chillies.",
+  "brand": { "@type": "Brand", "name": "Kartari Exim" },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://kartariexim.com/products/vegetables",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition"
+  }
+}
+        `}</script>
       </Helmet>
       <Header />
 

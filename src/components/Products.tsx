@@ -49,7 +49,7 @@ const Products = () => {
       premium: false
     },
     {
-      name: 'Animal Feed',
+      name: 'Soybean Meal & Animal Feed',
       slug: 'soybean-meal',
       description: 'High-protein Soya DOC, Yellow Maize, and Barley',
       icon: Tractor,
@@ -63,7 +63,7 @@ const Products = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div className="text-center mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <motion.h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6" variants={itemVariants}>
-            Product <span className="bg-gradient-to-r from-champagne-400 to-luxury-400 bg-clip-text text-transparent">Collections</span>
+            Premium Export <span className="bg-gradient-to-r from-champagne-400 to-luxury-400 bg-clip-text text-transparent">Products from India</span>
           </motion.h2>
           <motion.p className="text-xl text-platinum-300 max-w-4xl mx-auto leading-relaxed" variants={itemVariants}>
             Discover our curated selection of India's finest agricultural treasures, 
@@ -107,7 +107,7 @@ const Products = () => {
                     to={`/products/${collection.slug}`}
                     className="text-champagne-400 font-semibold hover:text-champagne-300 transition-colors duration-300 flex items-center group"
                   >
-                    Explore Collection
+                    {collection.slug === 'soybean-meal' ? 'Buy Bulk Soybean Meal' : 'Explore Collection'}
                     <span className="ml-2 group-hover:translate-x-2 transition-transform duration-300">→</span>
                   </Link>
                 </div>

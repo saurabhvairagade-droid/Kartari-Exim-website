@@ -41,10 +41,10 @@ const Hero = () => {
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight">
                 <span className="block">Kartari Exim</span>
                 <span className="block leading-snug pb-2 text-4xl md:text-5xl lg:text-6xl bg-gradient-to-r from-champagne-400 via-luxury-400 to-champagne-500 bg-clip-text text-transparent">
-                  Global Trading
+                  Soybean Meal Exporter
                 </span>
                 <span className="block pt-1 text-4xl md:text-5xl lg:text-6xl text-platinum-300">
-                  Redefined
+                  in India
                 </span>
               </h1>
               <motion.p className="text-xl md:text-2xl text-platinum-300 leading-relaxed font-light" variants={itemVariants}>

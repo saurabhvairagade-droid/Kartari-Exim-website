@@ -183,9 +183,12 @@ const AnimalFeedPage = () => {
       <main className="pt-32 px-4 md:px-8 max-w-7xl mx-auto">
 
         {/* Hero */}
-        <h1 className="text-4xl md:text-5xl font-bold text-champagne-400 mb-4">
+        <h1 className="text-4xl md:text-5xl font-bold text-champagne-400 mb-2">
           Soybean Meal — Soya DOC Exporter India
         </h1>
+        <h2 className="text-xl md:text-2xl font-semibold text-platinum-100 mb-4">
+          Trusted Soybean Meal Exporter in India
+        </h2>
         <p className="text-lg md:text-xl text-platinum-300 mb-10 max-w-3xl">
           Kartari Exim is a trusted Non-GMO soybean meal supplier and exporter based in Pune, Maharashtra, 
           supplying high-protein Soya DOC (De-Oiled Cake) to feed manufacturers, traders, and importers
@@ -197,7 +200,7 @@ const AnimalFeedPage = () => {
           <div>
             <img
               src="/soyaDOC.webp"
-              alt="Soybean meal Soya DOC 46% protein bulk export India Kartari Exim"
+              alt="Soybean meal exporter in India loading bulk Soya DOC 46% protein"
               className="w-96 h-64 object-cover rounded-lg shadow"
             />
           </div>

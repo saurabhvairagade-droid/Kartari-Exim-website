@@ -54,6 +54,22 @@ const SpicesPage = () => {
         <meta name="keywords" content="indian spices exporter, turmeric powder export, red chilli powder supplier, bulk spices india" />
         <meta property="og:title" content="Premium Indian Spices Exporter | Kartari Exim" />
         <meta property="og:description" content="Bulk export of premium Turmeric and Red Chilli from India." />
+        <script type="application/ld+json">{`
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "Premium Indian Spices (Turmeric, Red Chilli)",
+  "description": "Bulk export of premium Indian spices including Turmeric Powder, Red Chilli Powder, and Dried Red Chilli.",
+  "brand": { "@type": "Brand", "name": "Kartari Exim" },
+  "offers": {
+    "@type": "Offer",
+    "url": "https://kartariexim.com/products/spices",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition"
+  }
+}
+        `}</script>
       </Helmet>
       <Header />
       <main className="pt-32 px-4 md:px-8 max-w-7xl mx-auto">
