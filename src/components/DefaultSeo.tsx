@@ -15,6 +15,7 @@ const DefaultSeo = () => {
       <meta name="keywords" content="agricultural exporter India, soybean meal exporter, soya DOC supplier, Indian spices export, basmati rice exporter, Kartari Exim" />
       <meta name="author" content="Kartari Exim" />
       <meta name="robots" content="index, follow" />
+      <link rel="canonical" href={currentUrl} />
       
       {/* Open Graph Meta Tags for Social Media */}
       <meta property="og:title" content="Kartari Exim - Premium Agricultural Exports from India" />

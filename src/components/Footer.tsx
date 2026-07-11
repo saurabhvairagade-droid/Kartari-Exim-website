@@ -70,6 +70,7 @@ const Footer = () => {
               <li><Link to="/products/vegetables/" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">Fresh Vegetables</Link></li>
               <li><Link to="/products/fruits/" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">Fresh Fruits</Link></li>
               <li><Link to="/products/gourmet-processed-foods/" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">Processed Foods</Link></li>
+              <li><Link to="/ibc-tanks/" className="text-platinum-300 hover:text-champagne-400 transition-colors duration-300">IBC Tanks</Link></li>
             </ul>
           </div>
         </div>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+
 
 const ProcessedFoodPage = () => {
   useEffect(() => {
@@ -54,7 +53,6 @@ const ProcessedFoodPage = () => {
         <meta property="og:title" content="Premium Processed Food Exporter | Kartari Exim" />
         <meta property="og:description" content="Bulk export of premium Jaggery Powder and S30 Sugar from India." />
       </Helmet>
-      <Header />
 
       <main className="pt-32 px-4 md:px-8 max-w-7xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-champagne-400 mb-4">
@@ -206,7 +204,7 @@ const ProcessedFoodPage = () => {
           </form>
         </div>
       </main>
-      <Footer />
+
     </div>
   );
 };

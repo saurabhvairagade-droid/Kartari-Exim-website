@@ -68,7 +68,7 @@ const AnimalFeedPage = () => {
 
       <Helmet>
         {/* Primary SEO */}
-        <title>Soybean Meal Exporter India | Soya DOC 46–50% Protein | Kartari Exim</title>
+        <title>Soybean Meal Exporter in India | Soya DOC 46–50% Protein | Kartari Exim</title>
         <meta name="description" content="Buy Non-GMO Soybean Meal (Soya DOC) from Kartari Exim, Pune, India. 46–50% crude protein. Bulk export in 50kg PP bags for poultry, cattle, swine & aquaculture. Request a quote within 24 hours." />
         <meta name="keywords" content="soybean meal exporter India, soya DOC supplier Pune, de-oiled cake export, SBM 46% 48%, non-GMO soybean meal, animal feed India, bulk soya DOC" />
         <meta name="robots" content="index, follow" />
@@ -184,7 +184,7 @@ const AnimalFeedPage = () => {
 
         {/* Hero */}
         <h1 className="text-4xl md:text-5xl font-bold text-champagne-400 mb-2">
-          Soybean Meal — Soya DOC Exporter India
+          Soybean Meal — Soya DOC Exporter in India
         </h1>
         <h2 className="text-xl md:text-2xl font-semibold text-platinum-100 mb-4">
           Trusted Soybean Meal Exporter in India

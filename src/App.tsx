@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { LenisProvider } from './hooks';
 
 import Header from './components/Header';
@@ -10,6 +10,7 @@ import WhyChooseUs from './components/WhyChooseUs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import DefaultSeo from './components/DefaultSeo';
+
 
 // Lazy load pages for better performance and smaller initial bundle size
 const AnimalFeedPage = lazy(() => import('./Pages/AnimalFeedPage'));
@@ -23,6 +24,7 @@ const BlogPostPage = lazy(() => import('./Pages/BlogPostPage'));
 const DehydratedOnionFlakesPage = lazy(() => import('./Pages/DehydratedOnionFlakesPage'));
 const Error404Page = lazy(() => import('./Pages/Error404Page'));
 const Error400Page = lazy(() => import('./Pages/Error400Page'));
+const IBCTankPage = lazy(() => import('./Pages/IBCTankPage'));
 
 // Loading component
 const PageLoader = () => (
@@ -64,7 +66,7 @@ const PrerenderTrigger = () => {
 
       // Check 2: Helmet has injected a page-specific <title> (not the fallback one from index.html)
       const title = document.querySelector('title');
-      const hasDynamicTitle = title && title.textContent && !title.textContent.includes('Soya DOC, Spices, Basmati Rice');
+      const hasDynamicTitle = title && title.textContent && !title.textContent.includes('Kartari Exim | Agricultural Exporter India');
 
       // For the homepage, the Hero h1 is eager-loaded; also check Helmet has processed
       const isHome = location.pathname === '/';
@@ -130,6 +132,7 @@ function App() {
                 <Route path="/products/fruits" element={<FruitsPage />} />
                 <Route path="/products/basmati-rice" element={<BasmatiRicePage />} />
                 <Route path="/products/gourmet-processed-foods" element={<ProcessedFoodPage />} />
+                <Route path="/ibc-tanks" element={<IBCTankPage />} />
 
                 {/* Blog */}
                 <Route path="/blog" element={<BlogPage />} />

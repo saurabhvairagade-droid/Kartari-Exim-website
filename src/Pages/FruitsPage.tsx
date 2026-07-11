@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+
 
 const FruitsPage = () => {
   useEffect(() => {
@@ -70,7 +69,6 @@ const FruitsPage = () => {
 }
         `}</script>
       </Helmet>
-      <Header />
 
       <main className="pt-32 px-4 md:px-8 max-w-7xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-champagne-400 mb-4">
@@ -217,7 +215,7 @@ const FruitsPage = () => {
           </form>
         </div>
       </main>
-      <Footer />
+
     </div>
   );
 };
