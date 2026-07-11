@@ -215,7 +215,7 @@ const IBCTankPage = () => {
       </Helmet>
 
       {/* Hidden Netlify form */}
-      <form name="ibc-tank-inquiry" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <form name="IBC-inquiry" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
         <input type="text" name="name" />
         <input type="email" name="email" />
         <input type="tel" name="phone" />
@@ -406,14 +406,14 @@ const IBCTankPage = () => {
             </div>
           ) : (
             <form
-              name="ibc-tank-inquiry"
+              name="IBC-inquiry"
               method="POST"
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
               className="grid md:grid-cols-2 gap-6"
             >
-              <input type="hidden" name="form-name" value="ibc-tank-inquiry" />
+              <input type="hidden" name="form-name" value="IBC-inquiry" />
               <p hidden><input name="bot-field" /></p>
 
               <input type="text" name="name" placeholder="Your Name" required

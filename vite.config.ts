@@ -32,7 +32,8 @@ export default defineConfig({
             '/blog/soya-doc-adulteration-india',
             '/blog/non-gmo-soybean-meal-india',
             '/blog/top-5-countries-importing-soybean-meal-india',
-            '/blog/soybean-meal-prices-rising-india-2026'
+            '/blog/soybean-meal-prices-rising-india-2026',
+            '/ibc-tanks'
           ],
           renderer: '@prerenderer/renderer-puppeteer',
           rendererOptions: {

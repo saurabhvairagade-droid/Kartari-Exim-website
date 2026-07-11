@@ -1,4 +1,4 @@
-import{j as e,L as r,x as d,a as c}from"./vendor-D5KF-akF.js";import{H as s}from"./index-BT_dQs7i.js";import{blogPosts as o}from"./BlogPage-U74VyMPO.js";const m={"soybean-meal-vs-soya-doc":e.jsxs(e.Fragment,{children:[e.jsx("script",{type:"application/ld+json",dangerouslySetInnerHTML:{__html:`
+import{j as e,L as r,x as d,a as c}from"./vendor-D5KF-akF.js";import{H as s}from"./index-CvVruE_F.js";import{blogPosts as o}from"./BlogPage-DX48Efao.js";const m={"soybean-meal-vs-soya-doc":e.jsxs(e.Fragment,{children:[e.jsx("script",{type:"application/ld+json",dangerouslySetInnerHTML:{__html:`
 {
   "@context": "https://schema.org",
   "@type": "Article",
